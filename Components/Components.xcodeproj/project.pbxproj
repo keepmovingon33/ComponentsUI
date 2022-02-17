@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33BBDE7727BD29B300A03567 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE7627BD29B300A03567 /* UIView+Extension.swift */; };
+		33BBDE7927BD29EC00A03567 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE7827BD29EC00A03567 /* ButtonComponent.swift */; };
+		33BBDE7C27BD2A9D00A03567 /* ColorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE7B27BD2A9D00A03567 /* ColorComponent.swift */; };
+		33BBDE7E27BD2F4F00A03567 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE7D27BD2F4F00A03567 /* LoadingButton.swift */; };
+		33BBDE8727BD332C00A03567 /* StrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE8227BD332C00A03567 /* StrokeColorAnimation.swift */; };
+		33BBDE8827BD332C00A03567 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE8327BD332C00A03567 /* RotationAnimation.swift */; };
+		33BBDE8927BD332C00A03567 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE8427BD332C00A03567 /* ProgressView.swift */; };
+		33BBDE8A27BD332C00A03567 /* StrokeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE8527BD332C00A03567 /* StrokeAnimation.swift */; };
+		33BBDE8B27BD332C00A03567 /* ProgressShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BBDE8627BD332C00A03567 /* ProgressShapeLayer.swift */; };
 		33F0C7A627BC710B00AEB8BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0C7A527BC710B00AEB8BA /* AppDelegate.swift */; };
 		33F0C7A827BC710B00AEB8BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0C7A727BC710B00AEB8BA /* SceneDelegate.swift */; };
 		33F0C7AA27BC710B00AEB8BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0C7A927BC710B00AEB8BA /* ViewController.swift */; };
@@ -19,6 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33BBDE7627BD29B300A03567 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		33BBDE7827BD29EC00A03567 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		33BBDE7B27BD2A9D00A03567 /* ColorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorComponent.swift; sourceTree = "<group>"; };
+		33BBDE7D27BD2F4F00A03567 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		33BBDE8227BD332C00A03567 /* StrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeColorAnimation.swift; sourceTree = "<group>"; };
+		33BBDE8327BD332C00A03567 /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
+		33BBDE8427BD332C00A03567 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		33BBDE8527BD332C00A03567 /* StrokeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeAnimation.swift; sourceTree = "<group>"; };
+		33BBDE8627BD332C00A03567 /* ProgressShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressShapeLayer.swift; sourceTree = "<group>"; };
 		33F0C7A227BC710B00AEB8BA /* Components.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Components.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F0C7A527BC710B00AEB8BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F0C7A727BC710B00AEB8BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +61,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33BBDE7A27BD2A8400A03567 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				33BBDE7B27BD2A9D00A03567 /* ColorComponent.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		33BBDE8127BD332C00A03567 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				33BBDE8227BD332C00A03567 /* StrokeColorAnimation.swift */,
+				33BBDE8327BD332C00A03567 /* RotationAnimation.swift */,
+				33BBDE8427BD332C00A03567 /* ProgressView.swift */,
+				33BBDE8527BD332C00A03567 /* StrokeAnimation.swift */,
+				33BBDE8627BD332C00A03567 /* ProgressShapeLayer.swift */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
 		33F0C79927BC710B00AEB8BA = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +100,9 @@
 		33F0C7A427BC710B00AEB8BA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				33BBDE7A27BD2A8400A03567 /* Colors */,
 				33F0C7BE27BC7B6A00AEB8BA /* Extension */,
+				33BBDE8127BD332C00A03567 /* ProgressView */,
 				33F0C7B927BC71D700AEB8BA /* Buttons */,
 				33F0C7A527BC710B00AEB8BA /* AppDelegate.swift */,
 				33F0C7A727BC710B00AEB8BA /* SceneDelegate.swift */,
@@ -80,6 +120,8 @@
 			children = (
 				33F0C7BA27BC720100AEB8BA /* ButtonViewController.swift */,
 				33F0C7BC27BC775100AEB8BA /* RippleButton.swift */,
+				33BBDE7827BD29EC00A03567 /* ButtonComponent.swift */,
+				33BBDE7D27BD2F4F00A03567 /* LoadingButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -88,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				33F0C7BF27BC7B7B00AEB8BA /* UIColor+Extension.swift */,
+				33BBDE7627BD29B300A03567 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -163,11 +206,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F0C7BB27BC720100AEB8BA /* ButtonViewController.swift in Sources */,
+				33BBDE7727BD29B300A03567 /* UIView+Extension.swift in Sources */,
+				33BBDE7E27BD2F4F00A03567 /* LoadingButton.swift in Sources */,
 				33F0C7BD27BC775100AEB8BA /* RippleButton.swift in Sources */,
 				33F0C7AA27BC710B00AEB8BA /* ViewController.swift in Sources */,
 				33F0C7C027BC7B7B00AEB8BA /* UIColor+Extension.swift in Sources */,
+				33BBDE8827BD332C00A03567 /* RotationAnimation.swift in Sources */,
+				33BBDE7C27BD2A9D00A03567 /* ColorComponent.swift in Sources */,
 				33F0C7A627BC710B00AEB8BA /* AppDelegate.swift in Sources */,
 				33F0C7A827BC710B00AEB8BA /* SceneDelegate.swift in Sources */,
+				33BBDE8727BD332C00A03567 /* StrokeColorAnimation.swift in Sources */,
+				33BBDE7927BD29EC00A03567 /* ButtonComponent.swift in Sources */,
+				33BBDE8B27BD332C00A03567 /* ProgressShapeLayer.swift in Sources */,
+				33BBDE8A27BD332C00A03567 /* StrokeAnimation.swift in Sources */,
+				33BBDE8927BD332C00A03567 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,13 @@ import QuartzCore
 @IBDesignable
 open class RippleButton: UIButton {
     
+    @IBInspectable open var textColor: UIColor = UIColor(white: 1, alpha: 0.5) {
+        didSet {
+            setTitleColor(textColor, for: .normal)
+            tintColor = textColor
+        }
+    }
+    
     // ripplePercent = 0 -> zero ripple. ripplePercent = 1 -> full ripple
     @IBInspectable open var ripplePercent: Float = 1 {
         didSet {
@@ -35,7 +42,7 @@ open class RippleButton: UIButton {
     @IBInspectable open var shadowRippleRadius: Float = 1
     @IBInspectable open var shadowRippleEnable: Bool = false
     @IBInspectable open var trackTouchLocation: Bool = true
-    @IBInspectable open var touchUpAnimationTime: Double = 0.3
+    @IBInspectable open var touchUpAnimationTime: Double = 0.5
     
     let rippleView = UIView()
     let rippleBackgroundView = UIView()
@@ -71,7 +78,7 @@ open class RippleButton: UIButton {
         setup()
     }
     
-    fileprivate func setup() {
+    public func setup() {
         setupRippleView()
         
         rippleBackgroundView.backgroundColor = rippleBackgroundColor
@@ -93,14 +100,14 @@ open class RippleButton: UIButton {
         if let location = touchCenterLocation {
             print("location.x = \(location.x)")
             print("bounds.width = \(bounds.width)")
-            size = max(bounds.width - location.x, location.x) * 2
+            size = max(bounds.width - location.x, location.x) * 2 + 20
             
             rippleView.backgroundColor = rippleColor
             rippleView.frame = CGRect(x: x, y: y, width: size, height: size/2)
             
             rippleView.center = location
         }
-        let corner: CGFloat = size/2
+        let corner: CGFloat = size/4
         
         rippleView.layer.cornerRadius = corner
     }
@@ -119,7 +126,7 @@ open class RippleButton: UIButton {
         rippleView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         
         
-        UIView.animate(withDuration: 0.7, delay: 0, options: [UIView.AnimationOptions.curveEaseOut, UIView.AnimationOptions.allowUserInteraction],
+        UIView.animate(withDuration: touchUpAnimationTime, delay: 0, options: [UIView.AnimationOptions.curveEaseOut, UIView.AnimationOptions.allowUserInteraction],
             animations: {
                 self.rippleView.transform = CGAffineTransform.identity
             }, completion: nil)
@@ -135,7 +142,7 @@ open class RippleButton: UIButton {
             opacityAnim.toValue = 1
             
             let groupAnim = CAAnimationGroup()
-            groupAnim.duration = 0.7
+            groupAnim.duration = self.touchUpAnimationTime
             groupAnim.fillMode = CAMediaTimingFillMode.forwards
             groupAnim.isRemovedOnCompletion = false
             groupAnim.animations = [shadowAnim, opacityAnim]
@@ -147,15 +154,15 @@ open class RippleButton: UIButton {
     
     override open func cancelTracking(with event: UIEvent?) {
         super.cancelTracking(with: event)
-//        animateToNormal()
+        animateToNormal()
     }
     
     override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         super.endTracking(touch, with: event)
-//        animateToNormal()
+        animateToNormal()
     }
     
-    fileprivate func animateToNormal() {
+    open func animateToNormal() {
         UIView.animate(withDuration: 0.1, delay: 0, options: UIView.AnimationOptions.allowUserInteraction, animations: {
             self.rippleBackgroundView.alpha = 1
             }, completion: {(success: Bool) -> () in
@@ -165,7 +172,7 @@ open class RippleButton: UIButton {
         })
         
         
-        UIView.animate(withDuration: 0.7, delay: 0,
+        UIView.animate(withDuration: touchUpAnimationTime, delay: 0,
             options: [.curveEaseOut, .beginFromCurrentState, .allowUserInteraction],
             animations: {
                 self.rippleView.transform = CGAffineTransform.identity
@@ -177,7 +184,7 @@ open class RippleButton: UIButton {
                 opacityAnim.toValue = self.tempShadowOpacity
                 
                 let groupAnim = CAAnimationGroup()
-                groupAnim.duration = 0.7
+                groupAnim.duration = self.touchUpAnimationTime
                 groupAnim.fillMode = .forwards
                 groupAnim.isRemovedOnCompletion = false
                 groupAnim.animations = [shadowAnim, opacityAnim]
@@ -190,9 +197,6 @@ open class RippleButton: UIButton {
         super.layoutSubviews()
         
         setupRippleView()
-        if let knownTouchCenterLocation = touchCenterLocation {
-            rippleView.center = knownTouchCenterLocation
-        }
         
         rippleBackgroundView.layer.frame = bounds
         rippleBackgroundView.layer.mask = rippleMask
