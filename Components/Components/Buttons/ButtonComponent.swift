@@ -66,6 +66,9 @@ open class SmallSecondaryButton: RippleButton {
 
 open class ChipButton: RippleButton {
     public override func setup() {
+        if #available(iOS 15.0, *) {
+            configuration = .none
+        }
         backgroundColor = .white
         cornerRadius = frame.height / 2
         titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
@@ -97,23 +100,34 @@ open class ChipButton: RippleButton {
 }
 
 open class ActionButton: ChipButton {
+    let rightImage: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "ic_right"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     public override func setup() {
         super.setup()
+        addSubview(rightImage)
         titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        contentHorizontalAlignment = .right
-        if let image = UIImage(named: "ic_right") {
-            setImage(image, for: .normal)
-        }
+        contentHorizontalAlignment = .left
+       
         if #available(iOS 15.0, *) {
+            configuration = .plain()
             configuration?.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24)
-            configuration?.imagePlacement = .trailing
-            
-            configuration?.titlePadding = 50
         } else {
             contentEdgeInsets = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
-            
         }
         
-        
+        NSLayoutConstraint.activate([
+            rightImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -24),
+            rightImage.centerYAnchor
+                .constraint(equalTo: self.centerYAnchor),
+            rightImage.widthAnchor
+                .constraint(equalToConstant: 5),
+            rightImage.heightAnchor
+                .constraint(equalToConstant: 10)
+        ])
     }
 }
