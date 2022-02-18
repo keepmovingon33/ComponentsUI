@@ -68,6 +68,7 @@ extension UIView {
 
 extension UIView {
     private static let kLayerNameGradientBorder = "GradientBorderLayer"
+    private static let kLayerNameGradientBackground = "GradientBackgroundLayer"
     
     func gradientBorder(width: CGFloat,
                         colors: [UIColor],
@@ -80,6 +81,7 @@ extension UIView {
         border.colors = colors.map { return $0.cgColor }
         border.startPoint = startPoint
         border.endPoint = endPoint
+        border.name = UIView.kLayerNameGradientBorder
         
         let mask = CAShapeLayer()
         let maskRect = self.bounds.insetBy(dx: width, dy: width)
@@ -87,7 +89,6 @@ extension UIView {
         mask.fillColor = UIColor.clear.cgColor
         mask.strokeColor = UIColor.white.cgColor
         mask.lineWidth = width
-        
         border.mask = mask
         
         let exists = (existingBorder != nil)
@@ -109,6 +110,20 @@ extension UIView {
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint
         gradientLayer.frame = self.bounds
+        gradientLayer.name = UIView.kLayerNameGradientBackground
+        gradientLayer.zPosition = -1
         self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func removeLayer(name: String) {
+        self.layer.sublayers?.removeAll(where: { $0.name == name })
+    }
+    
+    func removeBorderLayer() {
+        removeLayer(name: UIView.kLayerNameGradientBorder)
+    }
+    
+    func removeBackgroundLayer() {
+        removeLayer(name: UIView.kLayerNameGradientBackground)
     }
 }

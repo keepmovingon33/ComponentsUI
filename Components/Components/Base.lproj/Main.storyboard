@@ -65,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IFv-h0-Csy">
-                                <rect key="frame" x="16" y="16" width="382" height="420"/>
+                                <rect key="frame" x="16" y="16" width="382" height="496"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sd-83-I6V" userLabel="PrimaryButton" customClass="PrimaryButton" customModule="Components" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
@@ -109,6 +109,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="5MR-uy-FWj" firstAttribute="width" secondItem="Wm1-ye-DF9" secondAttribute="width" id="PHC-YH-n7X"/>
                                             <constraint firstAttribute="height" constant="40" id="f0q-Py-kCR"/>
                                         </constraints>
                                     </stackView>
@@ -120,10 +121,18 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-bU-Uda" userLabel="ChipActionButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-bU-Uda" userLabel="ChipActionButton" customClass="ChipButton" customModule="Components" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="364" width="382" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="Q8M-HZ-LMh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L70-jZ-kjP" userLabel="ActionButton" customClass="ActionButton" customModule="Components" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="440" width="382" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="0GA-9S-qJF"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -162,7 +171,13 @@
         <designable name="5vx-5i-gc9">
             <size key="intrinsicContentSize" width="67" height="31"/>
         </designable>
+        <designable name="L70-jZ-kjP">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
         <designable name="Wm1-ye-DF9">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="oxp-bU-Uda">
             <size key="intrinsicContentSize" width="67" height="31"/>
         </designable>
         <designable name="u8E-mM-9DJ">

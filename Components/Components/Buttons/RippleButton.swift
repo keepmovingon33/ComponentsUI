@@ -70,11 +70,18 @@ open class RippleButton: UIButton {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        if #available(iOS 15.0, *) {
+            configuration = .filled()
+            configuration?.baseBackgroundColor = .clear
+        }
         setup()
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        if #available(iOS 15.0, *) {
+            configuration = .none
+        }
         setup()
     }
     
