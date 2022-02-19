@@ -10,12 +10,12 @@ import UIKit
 open class PrimaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = ColorComponent.primary
+        backgroundColor = ColorComponent.main
         cornerRadius = frame.height / 2
         // color for ripple
         rippleColor = UIColor(white: 1, alpha: 0.5)
-        rippleBackgroundColor = ColorComponent.primary
-        textColor = .black
+        rippleBackgroundColor = ColorComponent.main
+        textColor = ColorComponent.Grey.grey_100
         titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
     }
 }
@@ -23,14 +23,15 @@ open class PrimaryButton: RippleButton {
 open class SecondaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = .white
+        backgroundColor = ColorComponent.Grey.grey_0
         cornerRadius = frame.height / 2
         // color for ripple
-        rippleColor = UIColor(hexString: "E7EAF3")
-        rippleBackgroundColor = .white
-        textColor = .black
+        
+        rippleColor = ColorComponent.Indigo.indigo_10
+        rippleBackgroundColor = ColorComponent.Grey.grey_0
+        textColor = ColorComponent.Grey.grey_100
         titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-        borderColor = .black
+        borderColor = ColorComponent.Grey.grey_100
         borderWidth = 1
     }
 }
@@ -38,12 +39,12 @@ open class SecondaryButton: RippleButton {
 open class SmallPrimaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = .black
+        backgroundColor = ColorComponent.Grey.grey_100
         cornerRadius = frame.height / 2
         // color for ripple
         rippleColor = UIColor(white: 1, alpha: 0.5)
-        rippleBackgroundColor = .black
-        textColor = .white
+        rippleBackgroundColor = ColorComponent.Grey.grey_100
+        textColor = ColorComponent.Grey.grey_0
         titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
     }
 }
@@ -52,14 +53,14 @@ open class SmallPrimaryButton: RippleButton {
 open class SmallSecondaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = .white
+        backgroundColor = ColorComponent.Grey.grey_0
         cornerRadius = frame.height / 2
         // color for ripple
-        rippleColor = UIColor(hexString: "F2F4F7")
-        rippleBackgroundColor = .white
-        textColor = .black
+        rippleColor = ColorComponent.Indigo.indigo_5
+        rippleBackgroundColor = ColorComponent.Grey.grey_0
+        textColor = ColorComponent.Grey.grey_100
         titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
-        borderColor = UIColor(hexString: "D6DBEB")
+        borderColor = ColorComponent.Indigo.indigo_20
         borderWidth = 1
     }
 }
@@ -69,14 +70,14 @@ open class ChipButton: RippleButton {
         if #available(iOS 15.0, *) {
             configuration = .none
         }
-        backgroundColor = .white
+        backgroundColor = ColorComponent.Grey.grey_0
         cornerRadius = frame.height / 2
         titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-        backgroundColor = UIColor(hexString: "F5F5F5")
-        borderColor = UIColor(hexString: "E7EAF3")
+        backgroundColor = ColorComponent.Grey.grey_5
+        borderColor = ColorComponent.Indigo.indigo_10
         borderWidth = 1
-        textColor = .black
-        setTitleColor(UIColor(hexString: "005CCC"), for: .selected)
+        textColor = ColorComponent.Grey.grey_100
+        setTitleColor(ColorComponent.Gradient.start, for: .selected)
         tintColor = .clear
         addTarget(self, action: #selector(didButtonTapped), for: .touchUpInside)
     }
@@ -88,8 +89,8 @@ open class ChipButton: RippleButton {
     open override var isSelected: Bool {
         didSet {
             if isSelected {
-                gradientBorder(width: 2.0, colors: [UIColor(hexString: "005CCC"), UIColor(hexString: "07E4E4")], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 0.0))
-                applyBackgroundGradient(colors:[UIColor(hexString: "005CCC").withAlphaComponent(0.1), UIColor(hexString: "07E4E4").withAlphaComponent(0.1)])
+                gradientBorder(width: 2.0, colors: [ColorComponent.Gradient.start, ColorComponent.Gradient.end], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 0.0))
+                applyBackgroundGradient(colors:[ColorComponent.Gradient.start.withAlphaComponent(0.1), ColorComponent.Gradient.end.withAlphaComponent(0.1)])
             } else {
                 removeBorderLayer()
                 removeBackgroundLayer()
