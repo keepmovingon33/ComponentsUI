@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wTy-MB-dvT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="64C-0E-dof">
+            <objects>
+                <tableViewController id="wTy-MB-dvT" customClass="ViewController" customModule="DemoComponent" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rma-fa-Elf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="eA7-Hw-GSh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="a8Q-ad-SMo">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a8Q-ad-SMo" id="N9x-O9-hG7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thm-Gy-q6R">
+                                                    <rect key="frame" x="186" y="31.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Thm-Gy-q6R" firstAttribute="centerX" secondItem="N9x-O9-hG7" secondAttribute="centerX" id="PIv-Jh-Bsd"/>
+                                                <constraint firstItem="Thm-Gy-q6R" firstAttribute="centerY" secondItem="N9x-O9-hG7" secondAttribute="centerY" id="eTc-Nf-Cv0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fOP-md-DYd" kind="show" id="NvE-fg-SVV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="wTy-MB-dvT" id="OUb-dY-Su2"/>
+                            <outlet property="delegate" destination="wTy-MB-dvT" id="8nG-SY-E7U"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tS3-hA-1sS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471.01449275362324" y="-77.008928571428569"/>
+        </scene>
+        <!--Button View Controller-->
+        <scene sceneID="lew-t2-ycZ">
+            <objects>
+                <viewController id="fOP-md-DYd" customClass="ButtonViewController" customModule="DemoComponent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IST-JL-Qxt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PRj-wF-atz">
+                                <rect key="frame" x="16" y="16" width="382" height="496"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6f-pR-e7H" customClass="PrimaryButton" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyQ-ay-lhY" userLabel="SecondaryButton" customClass="SecondaryButton" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="76" width="382" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="tMZ-Zg-uZ3"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ank-wU-wyJ" customClass="LoadingButton" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="152" width="382" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Ol9-bP-N7I"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button2"/>
+                                        <connections>
+                                            <action selector="loadingButtonTapped:" destination="fOP-md-DYd" eventType="touchUpInside" id="BcC-rY-ACg"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-7W-520">
+                                        <rect key="frame" x="0.0" y="228" width="382" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ht-5i-s10" customClass="SmallPrimaryButton" customModule="BaseComponent">
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="40"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZG-o1-HVF" customClass="SmallSecondaryButton" customModule="BaseComponent">
+                                                <rect key="frame" x="206" y="0.0" width="176" height="40"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2Ky-fC-QLj"/>
+                                            <constraint firstItem="8Ht-5i-s10" firstAttribute="width" secondItem="hZG-o1-HVF" secondAttribute="width" id="2dc-4H-VSa"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZo-uL-tmP" userLabel="ChipButton" customClass="ChipButton" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="288" width="382" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Lxv-aV-FFz"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-jv-7tC" userLabel="ChipActionButton" customClass="ChipButton" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="364" width="382" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="dZR-Nk-ebv"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSf-ub-vLf" userLabel="ActionButton" customClass="ActionButton" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="440" width="382" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="C6n-on-s2N"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="F6f-pR-e7H" firstAttribute="height" secondItem="ZyQ-ay-lhY" secondAttribute="height" id="jma-aw-VJ2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4iC-yx-ba6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PRj-wF-atz" firstAttribute="leading" secondItem="IST-JL-Qxt" secondAttribute="leading" constant="16" id="866-uH-HC4"/>
+                            <constraint firstItem="PRj-wF-atz" firstAttribute="top" secondItem="4iC-yx-ba6" secondAttribute="top" constant="16" id="hlQ-qk-YeV"/>
+                            <constraint firstItem="4iC-yx-ba6" firstAttribute="trailing" secondItem="PRj-wF-atz" secondAttribute="trailing" constant="16" id="pRH-aI-3x2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="trv-qX-gI1"/>
+                    <connections>
+                        <outlet property="loadingButton" destination="Ank-wU-wyJ" id="via-3B-qho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNP-SV-fRs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="-77"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0tg-jv-7tC">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="8Ht-5i-s10">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="Ank-wU-wyJ">
+            <size key="intrinsicContentSize" width="55" height="30"/>
+        </designable>
+        <designable name="F6f-pR-e7H">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="ZyQ-ay-lhY">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="gZo-uL-tmP">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="hZG-o1-HVF">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="zSf-ub-vLf">
+            <size key="intrinsicContentSize" width="91" height="17"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
