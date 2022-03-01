@@ -10,7 +10,7 @@ import UIKit
 open class LoadingButton: PrimaryButton {
     
     let progressView: ProgressView = {
-        let progress = ProgressView(colors: [ColorComponent.Grey.grey_100], lineWidth: 3)
+        let progress = ProgressView(colors: [BaseColor.Grey.grey_100], lineWidth: 3)
         progress.translatesAutoresizingMaskIntoConstraints = false
         return progress
     }()

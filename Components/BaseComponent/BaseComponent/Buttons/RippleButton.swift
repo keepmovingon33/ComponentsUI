@@ -32,7 +32,7 @@ open class RippleButton: UIButton {
         }
     }
     
-    @IBInspectable open var rippleBackgroundColor: UIColor = ColorComponent.main {
+    @IBInspectable open var rippleBackgroundColor: UIColor = BaseColor.main {
         didSet {
             rippleBackgroundView.backgroundColor = rippleBackgroundColor
         }

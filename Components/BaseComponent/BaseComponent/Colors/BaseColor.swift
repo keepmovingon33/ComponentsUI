@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum ColorComponent {
+public enum BaseColor {
     /// #5EE3D3
     public static let main = ColorProvider.color(named: "Main")
     
