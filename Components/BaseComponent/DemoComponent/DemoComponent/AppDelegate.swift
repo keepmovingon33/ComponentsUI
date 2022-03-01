@@ -5,6 +5,7 @@
 //  Created by sky on 2/28/22.
 //
 
+import BaseComponent
 import UIKit
 
 @main
@@ -14,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // this func helps to load font from BaseComponent framework
+        BaseFontLoader().loadFonts()
         return true
     }
 

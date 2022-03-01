@@ -35,7 +35,7 @@ extension UIView {
     }
     
     
-    func addShadow(shadowColor: CGColor = ColorComponent.Grey.grey_100.cgColor,
+    func addShadow(shadowColor: CGColor = BaseColor.Grey.grey_100.cgColor,
                    shadowOffset: CGSize = CGSize(width: 1.0, height: 2.0),
                    shadowOpacity: Float = 0.4,
                    shadowRadius: CGFloat = 3.0) {
@@ -87,7 +87,7 @@ extension UIView {
         let maskRect = self.bounds.insetBy(dx: width, dy: width)
         mask.path = UIBezierPath(roundedRect: maskRect, cornerRadius: cornerRadius).cgPath
         mask.fillColor = UIColor.clear.cgColor
-        mask.strokeColor = ColorComponent.Grey.grey_0.cgColor
+        mask.strokeColor = BaseColor.Grey.grey_0.cgColor
         mask.lineWidth = width
         border.mask = mask
         

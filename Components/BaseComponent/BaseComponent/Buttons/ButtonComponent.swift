@@ -10,29 +10,31 @@ import UIKit
 open class PrimaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = ColorComponent.main
+        backgroundColor = BaseColor.main
         cornerRadius = frame.height / 2
         // color for ripple
-        rippleColor = ColorComponent.Grey.grey_0.withAlphaComponent(0.5)
+        rippleColor = BaseColor.Grey.grey_0.withAlphaComponent(0.5)
 //        rippleColor = UIColor(white: 1, alpha: 0.5)
-        rippleBackgroundColor = ColorComponent.main
-        textColor = ColorComponent.Grey.grey_100
-        titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        rippleBackgroundColor = BaseColor.main
+        textColor = BaseColor.Grey.grey_100
+//        titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        titleLabel?.font = BaseFont.headline
     }
 }
 
 open class SecondaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = ColorComponent.Grey.grey_0
+        backgroundColor = BaseColor.Grey.grey_0
         cornerRadius = frame.height / 2
         // color for ripple
         
-        rippleColor = ColorComponent.Indigo.indigo_10
-        rippleBackgroundColor = ColorComponent.Grey.grey_0
-        textColor = ColorComponent.Grey.grey_100
-        titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-        borderColor = ColorComponent.Grey.grey_100
+        rippleColor = BaseColor.Indigo.indigo_10
+        rippleBackgroundColor = BaseColor.Grey.grey_0
+        textColor = BaseColor.Grey.grey_100
+//        titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        titleLabel?.font = BaseFont.headline
+        borderColor = BaseColor.Grey.grey_100
         borderWidth = 1
     }
 }
@@ -40,14 +42,15 @@ open class SecondaryButton: RippleButton {
 open class SmallPrimaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = ColorComponent.Grey.grey_100
+        backgroundColor = BaseColor.Grey.grey_100
         cornerRadius = frame.height / 2
         // color for ripple
-        rippleColor = ColorComponent.Grey.grey_0.withAlphaComponent(0.5)
+        rippleColor = BaseColor.Grey.grey_0.withAlphaComponent(0.5)
 //        rippleColor = UIColor(white: 1, alpha: 0.5)
-        rippleBackgroundColor = ColorComponent.Grey.grey_100
-        textColor = ColorComponent.Grey.grey_0
-        titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        rippleBackgroundColor = BaseColor.Grey.grey_100
+        textColor = BaseColor.Grey.grey_0
+//        titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        titleLabel?.font = BaseFont.footnode.at(weight: .semiBold)
     }
 }
 
@@ -55,14 +58,15 @@ open class SmallPrimaryButton: RippleButton {
 open class SmallSecondaryButton: RippleButton {
     public override func setup() {
         super.setup()
-        backgroundColor = ColorComponent.Grey.grey_0
+        backgroundColor = BaseColor.Grey.grey_0
         cornerRadius = frame.height / 2
         // color for ripple
-        rippleColor = ColorComponent.Indigo.indigo_5
-        rippleBackgroundColor = ColorComponent.Grey.grey_0
-        textColor = ColorComponent.Grey.grey_100
-        titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
-        borderColor = ColorComponent.Indigo.indigo_20
+        rippleColor = BaseColor.Indigo.indigo_5
+        rippleBackgroundColor = BaseColor.Grey.grey_0
+        textColor = BaseColor.Grey.grey_100
+//        titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        titleLabel?.font = BaseFont.footnode.strong
+        borderColor = BaseColor.Indigo.indigo_20
         borderWidth = 1
     }
 }
@@ -72,14 +76,15 @@ open class ChipButton: RippleButton {
         if #available(iOS 15.0, *) {
             configuration = .none
         }
-        backgroundColor = ColorComponent.Grey.grey_0
+        backgroundColor = BaseColor.Grey.grey_0
         cornerRadius = frame.height / 2
-        titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-        backgroundColor = ColorComponent.Grey.grey_5
-        borderColor = ColorComponent.Indigo.indigo_10
+//        titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        titleLabel?.font = BaseFont.headline
+        backgroundColor = BaseColor.Grey.grey_5
+        borderColor = BaseColor.Indigo.indigo_10
         borderWidth = 1
-        textColor = ColorComponent.Grey.grey_100
-        setTitleColor(ColorComponent.Gradient.start, for: .selected)
+        textColor = BaseColor.Grey.grey_100
+        setTitleColor(BaseColor.Gradient.start, for: .selected)
         tintColor = .clear
         addTarget(self, action: #selector(didButtonTapped), for: .touchUpInside)
     }
@@ -91,8 +96,8 @@ open class ChipButton: RippleButton {
     open override var isSelected: Bool {
         didSet {
             if isSelected {
-                gradientBorder(width: 2.0, colors: [ColorComponent.Gradient.start, ColorComponent.Gradient.end], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 0.0))
-                applyBackgroundGradient(colors:[ColorComponent.Gradient.start.withAlphaComponent(0.1), ColorComponent.Gradient.end.withAlphaComponent(0.1)])
+                gradientBorder(width: 2.0, colors: [BaseColor.Gradient.start, BaseColor.Gradient.end], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 0.0))
+                applyBackgroundGradient(colors:[BaseColor.Gradient.start.withAlphaComponent(0.1), BaseColor.Gradient.end.withAlphaComponent(0.1)])
             } else {
                 removeBorderLayer()
                 removeBackgroundLayer()
@@ -113,7 +118,8 @@ open class ActionButton: ChipButton {
     public override func setup() {
         super.setup()
         addSubview(rightImage)
-        titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+//        titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        titleLabel?.font = BaseFont.subHeadline
         contentHorizontalAlignment = .left
        
         if #available(iOS 15.0, *) {
