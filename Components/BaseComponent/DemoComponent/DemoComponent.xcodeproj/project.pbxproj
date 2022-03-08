@@ -16,6 +16,7 @@
 		337AA3B327CD046800045F2C /* BaseComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AA3B227CD046800045F2C /* BaseComponent.framework */; };
 		337AA3B427CD046800045F2C /* BaseComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 337AA3B227CD046800045F2C /* BaseComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		337AA3DE27CD078300045F2C /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3DD27CD078300045F2C /* ButtonViewController.swift */; };
+		337C471F27D6469D008FAF6A /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C471E27D6469D008FAF6A /* SegmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		337AA3A527CD044200045F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337AA3B227CD046800045F2C /* BaseComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		337AA3DD27CD078300045F2C /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		337C471E27D6469D008FAF6A /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				337AA39927CD044100045F2C /* SceneDelegate.swift */,
 				337AA39B27CD044100045F2C /* ViewController.swift */,
 				337AA3DD27CD078300045F2C /* ButtonViewController.swift */,
+				337C471E27D6469D008FAF6A /* SegmentViewController.swift */,
 				337AA39D27CD044100045F2C /* Main.storyboard */,
 				337AA3A027CD044200045F2C /* Assets.xcassets */,
 				337AA3A227CD044200045F2C /* LaunchScreen.storyboard */,
@@ -171,6 +174,7 @@
 			files = (
 				337AA3DE27CD078300045F2C /* ButtonViewController.swift in Sources */,
 				337AA39C27CD044100045F2C /* ViewController.swift in Sources */,
+				337C471F27D6469D008FAF6A /* SegmentViewController.swift in Sources */,
 				337AA39827CD044100045F2C /* AppDelegate.swift in Sources */,
 				337AA39A27CD044100045F2C /* SceneDelegate.swift in Sources */,
 			);

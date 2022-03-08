@@ -21,6 +21,7 @@
 		337AA3DA27CD057D00045F2C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3CD27CD057D00045F2C /* UIView+Extension.swift */; };
 		337AA3E127CD12CE00045F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337AA3E027CD12CE00045F2C /* Assets.xcassets */; };
 		337AA3E327CD132D00045F2C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3E227CD132D00045F2C /* UIImage+Extension.swift */; };
+		337C472327D647AE008FAF6A /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C472227D647AE008FAF6A /* SegmentControl.swift */; };
 		337F539E27CE4E6A009D9894 /* Typesetting+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F536827CE4E6A009D9894 /* Typesetting+Named.swift */; };
 		337F539F27CE4E6A009D9894 /* Typesetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F536927CE4E6A009D9894 /* Typesetting.swift */; };
 		337F53A027CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F536A27CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift */; };
@@ -74,6 +75,7 @@
 		337AA3CD27CD057D00045F2C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		337AA3E027CD12CE00045F2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		337AA3E227CD132D00045F2C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		337C472227D647AE008FAF6A /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		337F536827CE4E6A009D9894 /* Typesetting+Named.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Typesetting+Named.swift"; sourceTree = "<group>"; };
 		337F536927CE4E6A009D9894 /* Typesetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typesetting.swift; sourceTree = "<group>"; };
 		337F536A27CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Typesetting+LineHeightFactor.swift"; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		337C472027D6478F008FAF6A /* Segments */ = {
+			isa = PBXGroup;
+			children = (
+				337C472227D647AE008FAF6A /* SegmentControl.swift */,
+			);
+			path = Segments;
+			sourceTree = "<group>";
+		};
 		337F536727CE4E6A009D9894 /* Typography */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +277,7 @@
 				337AA3C227CD057D00045F2C /* ProgressView */,
 				337AA3DF27CD12B200045F2C /* Resources */,
 				337F537127CE4E6A009D9894 /* Stylist */,
+				337C472027D6478F008FAF6A /* Segments */,
 				337F536727CE4E6A009D9894 /* Typography */,
 			);
 			path = BaseComponent;
@@ -397,6 +408,7 @@
 				337F53AE27CE4E6A009D9894 /* BaseFont+Weight.swift in Sources */,
 				337F53A527CE4E6A009D9894 /* Style+UITextView.swift in Sources */,
 				337F53A027CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift in Sources */,
+				337C472327D647AE008FAF6A /* SegmentControl.swift in Sources */,
 				337F53CA27CE4E6A009D9894 /* UIFont+Weight.swift in Sources */,
 				337AA3D427CD057D00045F2C /* ProgressView.swift in Sources */,
 				337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */,
