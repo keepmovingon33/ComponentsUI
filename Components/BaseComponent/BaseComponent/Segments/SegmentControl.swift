@@ -63,7 +63,7 @@ public class SegmentControl: UIView {
         self.layer.masksToBounds = true
     }
     
-    private func makeButton(title: String, icon: UIImage?) -> UIButton {
+    private func makeButton(title: String, icon: UIImage?, iconAlignment: UISemanticContentAttribute) -> UIButton {
         let button = UIButton(type: .custom)
         button.setTitle(title, for: .normal)
         button.setTitleColor(normalTitleColor, for: .normal)
@@ -72,8 +72,12 @@ public class SegmentControl: UIView {
         button.setImage(icon, for: .selected)
         button.imageView?.tintColor = selectedTitleColor
         button.addTarget(self, action: #selector(handleTap(_:)), for: .touchUpInside)
+    
+        button.semanticContentAttribute = iconAlignment
         // set image padding
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: iconAlignment == .forceLeftToRight ? 8 : 0,
+                                              bottom: 0, right: iconAlignment == .forceRightToLeft ? 8 : 0)
+        
         return button
     }
     
@@ -128,7 +132,9 @@ public class SegmentControl: UIView {
 
     }
     
-    public func setItems(items: [(title: String, icon: UIImage?)], completion: ((Int) -> Void)?) {
+    public func setItems(items: [(title: String, icon: UIImage?)],
+                         iconAlignment: UISemanticContentAttribute = .forceLeftToRight,
+                         completion: ((Int) -> Void)?) {
         // truyen closure de khi user taps on button, minh se handle action do
         didSelected = completion
         // remove het buttons ra khoi UI
@@ -136,7 +142,7 @@ public class SegmentControl: UIView {
         // remove het button items trong buttons
         buttons.removeAll()
         for item in items {
-            let button = makeButton(title: item.title, icon: item.icon)
+            let button = makeButton(title: item.title, icon: item.icon, iconAlignment: iconAlignment)
             addSubview(button)
             buttons.append(button)
         }

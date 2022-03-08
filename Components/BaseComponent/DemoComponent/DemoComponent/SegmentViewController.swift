@@ -12,10 +12,13 @@ class SegmentViewController: UIViewController {
     
     @IBOutlet weak var segmentControl: SegmentControl!
     @IBOutlet weak var segmentControl2: SegmentControl!
-
+    
+    // tao them 1 UIView bang tay (segmentControl)
+    var segmentControl3: SegmentControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         segmentControl.setItems(items: [("button1", nil), ("button2", nil)], completion: { index in
             print(index)
         })
@@ -25,6 +28,15 @@ class SegmentViewController: UIViewController {
                                  completion: { index in
             print(index)
         })
+        // set constraint programmatically
+        segmentControl3 = SegmentControl(frame: CGRect(x: 20, y: 148, width: UIScreen.main.bounds.width - 40, height: 44))
+        self.view.addSubview(segmentControl3)
+        segmentControl3.setItems(items: [("profile", UIImage(named: "ic_profile_filled")),
+                                         ("limit", UIImage(named: "ic_limits")),
+                                         ("settings", UIImage(named: "ic_settings_filled"))],
+                                 iconAlignment: .forceRightToLeft) { index in
+            print(index)
+        }
     }
-
+    
 }

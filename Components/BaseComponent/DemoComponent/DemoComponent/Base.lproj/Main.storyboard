@@ -249,7 +249,7 @@
             <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
         <designable name="zSf-ub-vLf">
-            <size key="intrinsicContentSize" width="46" height="30"/>
+            <size key="intrinsicContentSize" width="91" height="17"/>
         </designable>
     </designables>
     <resources>
