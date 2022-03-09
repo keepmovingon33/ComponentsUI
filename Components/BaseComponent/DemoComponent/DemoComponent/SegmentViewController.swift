@@ -15,6 +15,7 @@ class SegmentViewController: UIViewController {
     
     // tao them 1 UIView bang tay (segmentControl)
     var segmentControl3: SegmentControl!
+    var segmentControl4: SegmentControlBig!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,13 @@ class SegmentViewController: UIViewController {
         segmentControl3.setItems(items: [("profile", UIImage(named: "ic_profile_filled")),
                                          ("limit", UIImage(named: "ic_limits")),
                                          ("settings", UIImage(named: "ic_settings_filled"))],
+                                 iconAlignment: .forceRightToLeft) { index in
+            print(index)
+        }
+        
+        segmentControl4 = SegmentControlBig(frame: CGRect(x: 20, y: 212, width: UIScreen.main.bounds.width - 40, height: 44))
+        self.view.addSubview(segmentControl4)
+        segmentControl4.setItems(items: [("button1", nil), ("button2", nil)],
                                  iconAlignment: .forceRightToLeft) { index in
             print(index)
         }

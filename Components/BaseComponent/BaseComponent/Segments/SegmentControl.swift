@@ -25,9 +25,9 @@ public class SegmentControl: UIView {
     private var didSelected: ((Int) -> Void)?
     
     // MARK: - UI Variables
-    private var buttons: [UIButton] = []
+    public var buttons: [UIButton] = []
     // thumbView la view khi minh select vao thi no se chay tu trai sang phai hay nguoc lai
-    private var thumbView: UIView!
+    public lazy var thumbView: UIView = UIView(frame: self.bounds)
     
     // init cho code tay
     public override init(frame: CGRect) {
@@ -51,19 +51,15 @@ public class SegmentControl: UIView {
     }
     
     // set UIView cho segment va thumbView
-    private func initView() {
-        thumbView = UIView(frame: self.bounds)
+    public func initView() {
         thumbView.backgroundColor = selectedBackgroundColor
         self.addSubview(thumbView)
         self.backgroundColor = normalBackgroundColor
         self.borderColor = segmentBorderColor
         self.borderWidth = 1
-        
-        // khi minh border thi ko muon no bi trao ra ngoai
-        self.layer.masksToBounds = true
     }
     
-    private func makeButton(title: String, icon: UIImage?, iconAlignment: UISemanticContentAttribute) -> UIButton {
+    public func makeButton(title: String, icon: UIImage?, iconAlignment: UISemanticContentAttribute) -> UIButton {
         let button = UIButton(type: .custom)
         button.setTitle(title, for: .normal)
         button.setTitleColor(normalTitleColor, for: .normal)
@@ -82,7 +78,7 @@ public class SegmentControl: UIView {
     }
     
     // set frame, position cua items cho UI
-    private func layoutItem() {
+    public func layoutItem() {
         // khi minh tap button, chi thay doi x, ko thay doi y
         // CGFloat la tham so de set cho UI voi cac gia tri x,y,z, width, height
         var xPosition: CGFloat = 0
@@ -114,7 +110,7 @@ public class SegmentControl: UIView {
     }
     
     // khi minh tap vao 1 button, minh muon chay animation de thumbView chay toi vi tri moi, va cap nhat button status (normal or selected)
-    private func selectItem(index: Int, animated: Bool = true) {
+    public func selectItem(index: Int, animated: Bool = true) {
         guard index < buttons.count else { return }
         
         let selectedButton = buttons[index]

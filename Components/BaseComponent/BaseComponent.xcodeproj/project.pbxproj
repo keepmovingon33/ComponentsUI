@@ -22,6 +22,7 @@
 		337AA3E127CD12CE00045F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337AA3E027CD12CE00045F2C /* Assets.xcassets */; };
 		337AA3E327CD132D00045F2C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3E227CD132D00045F2C /* UIImage+Extension.swift */; };
 		337C472327D647AE008FAF6A /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C472227D647AE008FAF6A /* SegmentControl.swift */; };
+		337C472827D827F8008FAF6A /* SegmentControlBig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C472727D827F8008FAF6A /* SegmentControlBig.swift */; };
 		337F539E27CE4E6A009D9894 /* Typesetting+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F536827CE4E6A009D9894 /* Typesetting+Named.swift */; };
 		337F539F27CE4E6A009D9894 /* Typesetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F536927CE4E6A009D9894 /* Typesetting.swift */; };
 		337F53A027CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F536A27CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift */; };
@@ -76,6 +77,7 @@
 		337AA3E027CD12CE00045F2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		337AA3E227CD132D00045F2C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		337C472227D647AE008FAF6A /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
+		337C472727D827F8008FAF6A /* SegmentControlBig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlBig.swift; sourceTree = "<group>"; };
 		337F536827CE4E6A009D9894 /* Typesetting+Named.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Typesetting+Named.swift"; sourceTree = "<group>"; };
 		337F536927CE4E6A009D9894 /* Typesetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typesetting.swift; sourceTree = "<group>"; };
 		337F536A27CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Typesetting+LineHeightFactor.swift"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				337C472227D647AE008FAF6A /* SegmentControl.swift */,
+				337C472727D827F8008FAF6A /* SegmentControlBig.swift */,
 			);
 			path = Segments;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				337F53A127CE4E6A009D9894 /* NSAttributedString+Typography.swift in Sources */,
 				337F53AD27CE4E6A009D9894 /* BaseFont+Named.swift in Sources */,
 				337F53AC27CE4E6A009D9894 /* Style+UILabel.swift in Sources */,
+				337C472827D827F8008FAF6A /* SegmentControlBig.swift in Sources */,
 				337AA3D627CD057D00045F2C /* ProgressShapeLayer.swift in Sources */,
 				337AA3D527CD057D00045F2C /* StrokeAnimation.swift in Sources */,
 				337F53C827CE4E6A009D9894 /* BaseFont.swift in Sources */,
