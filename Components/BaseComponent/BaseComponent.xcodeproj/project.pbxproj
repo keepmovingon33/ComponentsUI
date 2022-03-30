@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3302B3AE27F3D083000E006F /* BaseInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3302B3AD27F3D083000E006F /* BaseInputField.swift */; };
+		3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3302B3B027F3D3AC000E006F /* Spacing.swift */; };
 		337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3BE27CD057D00045F2C /* RippleButton.swift */; };
 		337AA3D027CD057D00045F2C /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3C027CD057D00045F2C /* LoadingButton.swift */; };
 		337AA3D127CD057D00045F2C /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3C127CD057D00045F2C /* ButtonComponent.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3302B3AD27F3D083000E006F /* BaseInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputField.swift; sourceTree = "<group>"; };
+		3302B3B027F3D3AC000E006F /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		337AA3AB27CD044200045F2C /* DemoComponent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DemoComponent.xcodeproj; path = DemoComponent/DemoComponent.xcodeproj; sourceTree = SOURCE_ROOT; };
 		337AA3BE27CD057D00045F2C /* RippleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleButton.swift; sourceTree = "<group>"; };
 		337AA3C027CD057D00045F2C /* LoadingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
@@ -117,6 +121,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3302B3AB27F3D002000E006F /* InputField */ = {
+			isa = PBXGroup;
+			children = (
+				3302B3AD27F3D083000E006F /* BaseInputField.swift */,
+			);
+			path = InputField;
+			sourceTree = "<group>";
+		};
+		3302B3AF27F3D39B000E006F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3302B3B027F3D3AC000E006F /* Spacing.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		337AA38A27CD041B00045F2C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,12 +295,14 @@
 				33AE4CC327CD020B00B6F8CD /* BaseComponent.h */,
 				337AA3BD27CD057D00045F2C /* Buttons */,
 				337AA3C827CD057D00045F2C /* Colors */,
+				3302B3AF27F3D39B000E006F /* Common */,
 				337AA3CB27CD057D00045F2C /* Extension */,
 				337F537A27CE4E6A009D9894 /* Fonts */,
+				3302B3AB27F3D002000E006F /* InputField */,
 				337AA3C227CD057D00045F2C /* ProgressView */,
 				337AA3DF27CD12B200045F2C /* Resources */,
-				337F537127CE4E6A009D9894 /* Stylist */,
 				337C472027D6478F008FAF6A /* Segments */,
+				337F537127CE4E6A009D9894 /* Stylist */,
 				337F536727CE4E6A009D9894 /* Typography */,
 			);
 			path = BaseComponent;
@@ -394,12 +416,14 @@
 			files = (
 				337F53A127CE4E6A009D9894 /* NSAttributedString+Typography.swift in Sources */,
 				337F53AD27CE4E6A009D9894 /* BaseFont+Named.swift in Sources */,
+				3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */,
 				337F53AC27CE4E6A009D9894 /* Style+UILabel.swift in Sources */,
 				337C472827D827F8008FAF6A /* SegmentControlBig.swift in Sources */,
 				337AA3D627CD057D00045F2C /* ProgressShapeLayer.swift in Sources */,
 				337AA3D527CD057D00045F2C /* StrokeAnimation.swift in Sources */,
 				337F53C827CE4E6A009D9894 /* BaseFont.swift in Sources */,
 				337AA3D327CD057D00045F2C /* RotationAnimation.swift in Sources */,
+				3302B3AE27F3D083000E006F /* BaseInputField.swift in Sources */,
 				337F53AA27CE4E6A009D9894 /* Style.swift in Sources */,
 				337AA3D927CD057D00045F2C /* UIColor+Extension.swift in Sources */,
 				337AA3D227CD057D00045F2C /* StrokeColorAnimation.swift in Sources */,
