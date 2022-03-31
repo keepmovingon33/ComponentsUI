@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331FA1FB27F5D86E0020F874 /* InputFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331FA1FA27F5D86E0020F874 /* InputFieldViewController.swift */; };
 		337AA39827CD044100045F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA39727CD044100045F2C /* AppDelegate.swift */; };
 		337AA39A27CD044100045F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA39927CD044100045F2C /* SceneDelegate.swift */; };
 		337AA39C27CD044100045F2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA39B27CD044100045F2C /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		331FA1FA27F5D86E0020F874 /* InputFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldViewController.swift; sourceTree = "<group>"; };
 		337AA39427CD044100045F2C /* DemoComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		337AA39727CD044100045F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		337AA39927CD044100045F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,14 +82,15 @@
 			isa = PBXGroup;
 			children = (
 				337AA39727CD044100045F2C /* AppDelegate.swift */,
-				337AA39927CD044100045F2C /* SceneDelegate.swift */,
-				337AA39B27CD044100045F2C /* ViewController.swift */,
-				337AA3DD27CD078300045F2C /* ButtonViewController.swift */,
-				337C471E27D6469D008FAF6A /* SegmentViewController.swift */,
-				337AA39D27CD044100045F2C /* Main.storyboard */,
 				337AA3A027CD044200045F2C /* Assets.xcassets */,
-				337AA3A227CD044200045F2C /* LaunchScreen.storyboard */,
+				337AA3DD27CD078300045F2C /* ButtonViewController.swift */,
 				337AA3A527CD044200045F2C /* Info.plist */,
+				331FA1FA27F5D86E0020F874 /* InputFieldViewController.swift */,
+				337AA3A227CD044200045F2C /* LaunchScreen.storyboard */,
+				337AA39D27CD044100045F2C /* Main.storyboard */,
+				337AA39927CD044100045F2C /* SceneDelegate.swift */,
+				337C471E27D6469D008FAF6A /* SegmentViewController.swift */,
+				337AA39B27CD044100045F2C /* ViewController.swift */,
 			);
 			path = DemoComponent;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				337C471F27D6469D008FAF6A /* SegmentViewController.swift in Sources */,
 				337AA39827CD044100045F2C /* AppDelegate.swift in Sources */,
 				337AA39A27CD044100045F2C /* SceneDelegate.swift in Sources */,
+				331FA1FB27F5D86E0020F874 /* InputFieldViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
