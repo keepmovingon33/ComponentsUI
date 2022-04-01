@@ -32,9 +32,11 @@ public class BaseInputField: UIView {
     lazy var textField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.font = BaseFont.smallTitle
+        textField.font = BaseFont.smallTitle.at(weight: .semiBold)
         textField.textAlignment = inputAlignment
+        textField.autocorrectionType = .no
         textField.delegate = self
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         return textField
     }()
     
@@ -43,6 +45,7 @@ public class BaseInputField: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.contentMode = .scaleAspectFill
         button.setImage(ImageProvider.image(named: "ic_clear"), for: .normal)
+        button.addTarget(self, action: #selector(clearButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -114,6 +117,11 @@ public class BaseInputField: UIView {
         setupUI()
     }
     
+    @objc func clearButtonTapped(_ input: UIButton) {
+        textField.text = ""
+        clearButton.isHidden = true
+    }
+    
     public func setupUI() {
         self.addSubview(contentView)
         // constraints for contentView
@@ -151,8 +159,9 @@ public class BaseInputField: UIView {
             textField.bottomAnchor.constraint(equalTo: middleView.bottomAnchor),
             textField.centerXAnchor.constraint(equalTo: middleView.centerXAnchor),
             textField.trailingAnchor.constraint(equalTo: middleView.trailingAnchor, constant: -Spacing.large),
-            clearButton.topAnchor.constraint(equalTo: middleView.topAnchor),
-            clearButton.bottomAnchor.constraint(equalTo: middleView.bottomAnchor),
+            
+            clearButton.topAnchor.constraint(greaterThanOrEqualTo: middleView.topAnchor),
+            clearButton.centerYAnchor.constraint(equalTo: middleView.centerYAnchor),
             clearButton.trailingAnchor.constraint(equalTo: middleView.trailingAnchor),
             clearButton.widthAnchor.constraint(equalToConstant: Spacing.medium),
             clearButton.heightAnchor.constraint(equalToConstant: Spacing.medium)
@@ -164,30 +173,24 @@ public class BaseInputField: UIView {
     
     private func stateChanged() {
         updatePlaceholder()
+        updateInputField()
         updateMessage()
         updateUnderline()
     }
     
     private func updatePlaceholder() {
-        switch inputState {
-        case .blank:
-            titleLabel.textColor = .clear
-            textField.attributedPlaceholder = NSAttributedString(string: placeholder, typesetting: Typesetting.smallTitle.at(color: BaseColor.Grey.grey_50))
-        case .focus:
-            titleLabel.textColor = BaseColor.Indigo.indigo_50
+        titleLabel.textColor = inputState.getTitleColor(input: textField.text)
+        if let style = inputState.getInputPlaceholder(input: textField.text) {
+            textField.attributedPlaceholder = NSAttributedString(string: placeholder, typesetting: style)
+        } else {
             textField.attributedPlaceholder = nil
-        case .lostFocus:
-            titleLabel.textColor = BaseColor.Grey.grey_50
-            textField.attributedPlaceholder = nil
-        case .error:
-            if let text = textField.text, !text.isEmpty {
-                titleLabel.textColor = BaseColor.Denotive.red_50
-                textField.attributedPlaceholder = nil
-            } else {
-                titleLabel.textColor = .clear
-                textField.attributedPlaceholder = NSAttributedString(string: placeholder, typesetting: Typesetting.smallTitle.at(color: BaseColor.Grey.grey_50))
-            }
         }
+    }
+    
+    private func updateInputField() {
+        textField.textColor = inputState.getInputColor()
+        clearButton.tintColor = inputState.getClearButtonColor()
+        clearButton.isHidden = inputState.isHiddenClearButton(input: textField.text)
     }
     
     private func updateUnderline() {
@@ -211,6 +214,9 @@ extension BaseInputField: UITextFieldDelegate {
         } else {
             inputState = .blank
         }
-        
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        clearButton.isHidden = textField.text?.isEmpty == true
     }
 }
