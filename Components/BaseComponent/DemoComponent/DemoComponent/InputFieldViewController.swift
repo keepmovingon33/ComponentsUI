@@ -20,7 +20,13 @@ class InputFieldViewController: UIViewController {
         
         inputField.placeholder = ""
         inputField2.placeholder = "username"
+        inputField2.helper = "Testing for helper"
         inputField3.placeholder = "username"
         inputField4.placeholder = "username"
+    }
+    
+    
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        inputField2.errorMessage = "invalid username"
     }
 }

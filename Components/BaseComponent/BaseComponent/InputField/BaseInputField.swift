@@ -79,13 +79,14 @@ public class BaseInputField: UIView {
         let label = UILabel()
         label.font = BaseFont.caption
         label.numberOfLines = 0
-        
+        label.isHidden = true
         return label
     }()
     
     lazy var messageImage: UIImageView = {
         let imageView = UIImageView(image: ImageProvider.image(named: "ic_error"))
         imageView.tintColor = BaseColor.Denotive.red_50
+        imageView.isHidden = true
         return imageView
     }()
     
@@ -109,6 +110,24 @@ public class BaseInputField: UIView {
         didSet {
             titleLabel.text = placeholder
             textField.attributedPlaceholder = NSAttributedString(string: placeholder, typesetting: Typesetting.smallTitle.at(color: BaseColor.Grey.grey_50))
+        }
+    }
+    
+    public var helper: String? = nil {
+        didSet {
+            guard let helper = helper else { return }
+            messageLabel.attributedText = NSAttributedString(string: helper, typesetting: Typesetting.caption.at(color: BaseColor.Grey.grey_50))
+            messageLabel.isHidden = false
+            messageImage.isHidden = true
+        }
+    }
+    
+    public var errorMessage: String? = nil {
+        didSet {
+            guard let message = errorMessage else { return }
+            messageLabel.attributedText = NSAttributedString(string: message, typesetting: Typesetting.caption.at(color: BaseColor.Denotive.red_50))
+            messageLabel.isHidden = false
+            messageImage.isHidden = false
         }
     }
     

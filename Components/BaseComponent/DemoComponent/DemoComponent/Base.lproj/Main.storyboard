@@ -257,20 +257,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-gB-WR5">
-                                <rect key="frame" x="16" y="16" width="382" height="776"/>
+                                <rect key="frame" x="16" y="16" width="382" height="304"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-p8-XKd" customClass="BaseInputField" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-4p-mDB" customClass="BaseInputField" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="106" width="382" height="90"/>
+                                        <rect key="frame" x="0.0" y="66" width="382" height="50"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-dl-3T3" customClass="BaseInputField" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="212" width="382" height="90"/>
+                                        <rect key="frame" x="0.0" y="132" width="382" height="50"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputField" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="318" width="382" height="458"/>
+                                        <rect key="frame" x="0.0" y="198" width="382" height="50"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j12-dg-sD3" customClass="PrimaryButton" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="264" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="paP-4U-xxW"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitButtonTapped:" destination="DKY-Wg-WQl" eventType="touchUpInside" id="bCx-WL-JAk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
