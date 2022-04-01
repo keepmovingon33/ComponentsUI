@@ -79,5 +79,10 @@ public enum InputState {
             return BaseColor.Denotive.red_50
         }
     }
+    
+    // computed property
+    var isUnderlineAnimated: Bool {
+        return self == .focus || self == .error
+    }
 }
 

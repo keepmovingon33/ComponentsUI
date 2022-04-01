@@ -16,6 +16,7 @@ public class BaseInputField: UIView {
         view.addSubview(titleLabel)
         view.addSubview(middleView)
         view.addSubview(underlineView)
+        view.addSubview(underlineAnimationView)
         view.addSubview(messageStackView)
         return view
     }()
@@ -55,6 +56,16 @@ public class BaseInputField: UIView {
         view.backgroundColor = BaseColor.Grey.grey_50
         return view
     }()
+    
+    lazy var underlineAnimationView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = BaseColor.Indigo.indigo_50
+        return view
+    }()
+    
+    // we use this one for animation to change the width for underline
+    private var underlineAnimationWidthConstraint: NSLayoutConstraint?
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -142,8 +153,11 @@ public class BaseInputField: UIView {
             underlineView.topAnchor.constraint(equalTo: middleView.bottomAnchor, constant: Spacing.tiny),
             underlineView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             underlineView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            
             underlineView.heightAnchor.constraint(equalToConstant: 1),
+            
+            underlineAnimationView.centerYAnchor.constraint(equalTo: underlineView.centerYAnchor),
+            underlineAnimationView.centerXAnchor.constraint(equalTo: underlineView.centerXAnchor),
+            underlineAnimationView.heightAnchor.constraint(equalToConstant: 2),
             
             messageStackView.topAnchor.constraint(equalTo: underlineView.bottomAnchor, constant: Spacing.tiny),
             messageStackView.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: Spacing.medium),
@@ -166,6 +180,9 @@ public class BaseInputField: UIView {
             clearButton.widthAnchor.constraint(equalToConstant: Spacing.medium),
             clearButton.heightAnchor.constraint(equalToConstant: Spacing.medium)
         ])
+        
+        underlineAnimationWidthConstraint = underlineAnimationView.widthAnchor.constraint(equalToConstant: 0)
+        underlineAnimationWidthConstraint?.isActive = true
         
         stateChanged()
         
@@ -194,7 +211,10 @@ public class BaseInputField: UIView {
     }
     
     private func updateUnderline() {
-        
+        underlineAnimationWidthConstraint?.constant = inputState.isUnderlineAnimated ? underlineView.bounds.width : 0
+        UIView.animate(withDuration: 0.2) {
+            self.layoutIfNeeded()
+        }
     }
     
     private func updateMessage() {
