@@ -126,6 +126,7 @@ public class BaseInputField: UIView {
             messageLabel.isHidden = false
             messageImage.isHidden = false
             inputState = .error
+            self.shake()
         }
     }
     
@@ -190,6 +191,7 @@ public class BaseInputField: UIView {
             textField.bottomAnchor.constraint(equalTo: middleView.bottomAnchor),
             textField.centerXAnchor.constraint(equalTo: middleView.centerXAnchor),
             textField.trailingAnchor.constraint(equalTo: middleView.trailingAnchor, constant: -Spacing.large),
+            textField.heightAnchor.constraint(greaterThanOrEqualToConstant: 26),
             
             clearButton.topAnchor.constraint(greaterThanOrEqualTo: middleView.topAnchor),
             clearButton.centerYAnchor.constraint(equalTo: middleView.centerYAnchor),
@@ -208,7 +210,6 @@ public class BaseInputField: UIView {
     private func stateChanged() {
         updatePlaceholder()
         updateInputField()
-        updateMessage()
         updateUnderline()
         updateHelper()
     }
@@ -229,14 +230,11 @@ public class BaseInputField: UIView {
     }
     
     private func updateUnderline() {
+        underlineAnimationView.backgroundColor = inputState.getUnderlineColor()
         underlineAnimationWidthConstraint?.constant = inputState.isUnderlineAnimated ? underlineView.bounds.width : 0
         UIView.animate(withDuration: 0.2) {
             self.layoutIfNeeded()
         }
-    }
-    
-    private func updateMessage() {
-        
     }
     
     private func updateHelper() {
@@ -263,5 +261,6 @@ extension BaseInputField: UITextFieldDelegate {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         clearButton.isHidden = textField.text?.isEmpty == true
+        inputState = .focus
     }
 }
