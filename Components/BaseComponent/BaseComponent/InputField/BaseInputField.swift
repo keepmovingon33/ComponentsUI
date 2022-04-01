@@ -115,10 +115,7 @@ public class BaseInputField: UIView {
     
     public var helper: String? = nil {
         didSet {
-            guard let helper = helper else { return }
-            messageLabel.attributedText = NSAttributedString(string: helper, typesetting: Typesetting.caption.at(color: BaseColor.Grey.grey_50))
-            messageLabel.isHidden = false
-            messageImage.isHidden = true
+            updateHelper()
         }
     }
     
@@ -128,6 +125,7 @@ public class BaseInputField: UIView {
             messageLabel.attributedText = NSAttributedString(string: message, typesetting: Typesetting.caption.at(color: BaseColor.Denotive.red_50))
             messageLabel.isHidden = false
             messageImage.isHidden = false
+            inputState = .error
         }
     }
     
@@ -212,6 +210,7 @@ public class BaseInputField: UIView {
         updateInputField()
         updateMessage()
         updateUnderline()
+        updateHelper()
     }
     
     private func updatePlaceholder() {
@@ -238,6 +237,13 @@ public class BaseInputField: UIView {
     
     private func updateMessage() {
         
+    }
+    
+    private func updateHelper() {
+        guard let helper = helper, inputState != .error else { return }
+        messageLabel.attributedText = NSAttributedString(string: helper, typesetting: Typesetting.caption.at(color: BaseColor.Grey.grey_50))
+        messageLabel.isHidden = false
+        messageImage.isHidden = true
     }
 }
 
