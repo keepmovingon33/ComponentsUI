@@ -21,6 +21,8 @@ class InputFieldViewController: UIViewController {
         inputField.placeholder = ""
         inputField2.placeholder = "username"
         inputField2.helper = "Testing for helper"
+        inputField2.keyboardType = .emailAddress
+        inputField2.returnKeyType = .next
         inputField3.placeholder = "username"
         inputField4.placeholder = "username"
     }

@@ -113,6 +113,18 @@ public class BaseInputField: UIView {
         }
     }
     
+    public var keyboardType: UIKeyboardType = .default {
+        didSet {
+            textField.keyboardType = keyboardType
+        }
+    }
+    
+    public var returnKeyType: UIReturnKeyType = .default {
+        didSet {
+            textField.returnKeyType = returnKeyType
+        }
+    }
+    
     public var helper: String? = nil {
         didSet {
             updateHelper()
