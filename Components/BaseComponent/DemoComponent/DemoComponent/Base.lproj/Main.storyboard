@@ -259,7 +259,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-gB-WR5">
                                 <rect key="frame" x="16" y="16" width="382" height="304"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-p8-XKd" customClass="BaseInputField" customModule="BaseComponent">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-p8-XKd" customClass="BaseDropDown" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-4p-mDB" customClass="BaseInputField" customModule="BaseComponent">

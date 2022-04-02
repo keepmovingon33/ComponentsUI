@@ -71,12 +71,10 @@ public enum InputState {
     
     func getClearButtonColor() -> UIColor {
         switch self {
-        case .blank, .lostFocus:
-            return .clear
-        case .focus:
-            return BaseColor.Grey.grey_100
         case .error:
             return BaseColor.Denotive.red_50
+        default:
+            return BaseColor.Grey.grey_100
         }
     }
     
