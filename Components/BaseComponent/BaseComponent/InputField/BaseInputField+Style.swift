@@ -78,6 +78,17 @@ public enum InputState {
         }
     }
     
+    func getArrowButtonColor() -> UIColor {
+        switch self {
+        case .focus:
+            return BaseColor.Indigo.indigo_50
+        case .error:
+            return BaseColor.Denotive.red_50
+        default:
+            return BaseColor.Grey.grey_100
+        }
+    }
+    
     // computed property
     var isUnderlineAnimated: Bool {
         return self == .focus || self == .error

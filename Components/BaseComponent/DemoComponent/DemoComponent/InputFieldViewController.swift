@@ -29,6 +29,10 @@ class InputFieldViewController: UIViewController {
     
     
     @IBAction func submitButtonTapped(_ sender: Any) {
+        inputField.errorMessage = "invalid"
+        // turn off keyboard when hit done button
+//        inputField.endEditing(true)
+        self.view.endEditing(true)
         inputField2.errorMessage = "invalid username"
     }
 }

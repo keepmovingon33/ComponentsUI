@@ -15,7 +15,7 @@ public class BaseDropDown: BaseInput {
         return picker
     }()
     
-    lazy var toolbar: UIToolbar = {
+    lazy var toolbarPicker: UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
@@ -29,13 +29,14 @@ public class BaseDropDown: BaseInput {
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
 
-        return toolbar
+        return toolBar
     }()
     
     @objc func doneAction(_ input: UIBarButtonItem) {
         let item = pickerView.selectedRow(inComponent: 0) // we only have one section
         textField.text = data[item]
         textField.endEditing(true)
+        inputState = .lostFocus
     }
     
     @objc func cancelAction(_ input: UIBarButtonItem) {
@@ -47,20 +48,32 @@ public class BaseDropDown: BaseInput {
     override func setupMiddleView() {
         rightButton.setImage(ImageProvider.image(named: "ic_chevron_down"), for: .normal)
         textField.inputView = pickerView
-//        textField.inputAccessoryView = toolbar
+        textField.inputAccessoryView = toolbarPicker
+        textField.tintColor = .clear
     }
     
     override func rightButtonTapped(_ input: UIButton) {
-        
+        // bat dau editing, chon textField bat dau editing
+        textField.becomeFirstResponder()
     }
     
     override func updateInputField() {
         textField.textColor = inputState.getInputColor()
-        rightButton.tintColor = inputState.getClearButtonColor()
+        rightButton.tintColor = inputState.getArrowButtonColor()
     }
     
-    override func textFieldDidChange(_ textField: UITextField) {
-        
+    public override func textFieldDidEndEditing(_ textField: UITextField) {
+        super.textFieldDidEndEditing(textField)
+        UIView.animate(withDuration: 0.2) {
+            self.rightButton.transform = self.rightButton.transform.rotated(by: .pi)
+        }
+    }
+    
+    public override func textFieldDidBeginEditing(_ textField: UITextField) {
+        super.textFieldDidBeginEditing(textField)
+        UIView.animate(withDuration: 0.2) {
+            self.rightButton.transform = self.rightButton.transform.rotated(by: .pi)
+        }
     }
 }
 

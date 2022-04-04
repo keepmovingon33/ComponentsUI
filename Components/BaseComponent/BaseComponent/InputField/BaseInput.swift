@@ -132,11 +132,8 @@ public class BaseInput: UIView {
     
     public var errorMessage: String? = nil {
         didSet {
-            guard let message = errorMessage else { return }
-            messageLabel.attributedText = NSAttributedString(string: message, typesetting: Typesetting.caption.at(color: BaseColor.Denotive.red_50))
-            messageLabel.isHidden = false
-            messageImage.isHidden = false
             inputState = .error
+            updateErrorMessage()
             self.shake()
         }
     }
@@ -227,6 +224,7 @@ public class BaseInput: UIView {
         updateInputField()
         updateUnderline()
         updateHelper()
+        updateErrorMessage()
     }
     
     private func updatePlaceholder() {
@@ -259,6 +257,17 @@ public class BaseInput: UIView {
         messageImage.isHidden = true
     }
     
+    private func updateErrorMessage() {
+        guard let message = errorMessage, inputState == .error else {
+            messageLabel.isHidden = true
+            messageImage.isHidden = true
+            return
+        }
+        messageLabel.attributedText = NSAttributedString(string: message, typesetting: Typesetting.caption.at(color: BaseColor.Denotive.red_50))
+        messageLabel.isHidden = false
+        messageImage.isHidden = false
+    }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         rightButton.isHidden = textField.text?.isEmpty == true
         inputState = .focus
@@ -268,10 +277,12 @@ public class BaseInput: UIView {
 extension BaseInput: UITextFieldDelegate {
     // start editing
     public func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard inputState != .error else { return }
         inputState = .focus
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
+        guard inputState != .error else { return }
         if let text = textField.text, !text.isEmpty {
             inputState = .lostFocus
         } else {
