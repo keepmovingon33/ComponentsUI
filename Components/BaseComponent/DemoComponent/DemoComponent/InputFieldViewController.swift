@@ -23,16 +23,16 @@ class InputFieldViewController: UIViewController {
         inputField2.helper = "Testing for helper"
         inputField2.keyboardType = .emailAddress
         inputField2.returnKeyType = .next
-        inputField3.placeholder = "username"
+        inputField3.placeholder = "phone number"
         inputField4.placeholder = "username"
     }
     
     
     @IBAction func submitButtonTapped(_ sender: Any) {
-        inputField.errorMessage = "invalid"
         // turn off keyboard when hit done button
-//        inputField.endEditing(true)
         self.view.endEditing(true)
+        inputField.errorMessage = "invalid"
         inputField2.errorMessage = "invalid username"
+        inputField3.errorMessage = "invalid phoneNumber"
     }
 }

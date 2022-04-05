@@ -8,7 +8,8 @@
 import UIKit
 
 public class BaseInputPhoneNumber: BaseInputField {
-    
+    var patternNotStartWithZero: String = "XXX XXXX XXX"
+    var patternStartWithZero: String = "XXX XXXX XXXX"
     lazy var countryCodeView: CountryCodeView = {
         let view = CountryCodeView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -20,6 +21,7 @@ public class BaseInputPhoneNumber: BaseInputField {
         middleView.addSubview(countryCodeView)
         textField.textAlignment = .left
         titleLabel.textAlignment = .left
+        keyboardType = .numberPad
         
         NSLayoutConstraint.activate([
             countryCodeView.topAnchor.constraint(greaterThanOrEqualTo: middleView.topAnchor),
@@ -41,5 +43,14 @@ public class BaseInputPhoneNumber: BaseInputField {
             titleLabel.leadingAnchor.constraint(equalTo: textField.leadingAnchor),
     
         ])
+    }
+    
+    override func textFieldDidChange(_ textField: UITextField) {
+        guard let text = textField.text, let firstCharacter = text.first else { return }
+        let pattern = firstCharacter == "0" ? patternStartWithZero : patternNotStartWithZero
+        let newString = text.format(with: pattern)
+        textField.text = newString
+        rightButton.isHidden = newString.isEmpty == true
+        inputState = .focus
     }
 }
