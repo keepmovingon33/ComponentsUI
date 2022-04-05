@@ -265,7 +265,7 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-4p-mDB" customClass="BaseInputField" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="66" width="382" height="50"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-dl-3T3" customClass="BaseInputField" customModule="BaseComponent">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-dl-3T3" customClass="BaseInputPhoneNumber" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="132" width="382" height="50"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputField" customModule="BaseComponent">
@@ -327,6 +327,9 @@
         </designable>
         <designable name="hZG-o1-HVF">
             <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="j12-dg-sD3">
+            <size key="intrinsicContentSize" width="49" height="30"/>
         </designable>
         <designable name="zSf-ub-vLf">
             <size key="intrinsicContentSize" width="91" height="17"/>

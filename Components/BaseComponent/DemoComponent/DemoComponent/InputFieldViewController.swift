@@ -12,7 +12,7 @@ class InputFieldViewController: UIViewController {
     
     @IBOutlet weak var inputField: BaseDropDown!
     @IBOutlet weak var inputField2: BaseInputField!
-    @IBOutlet weak var inputField3: BaseInputField!
+    @IBOutlet weak var inputField3: BaseInputPhoneNumber!
     @IBOutlet weak var inputField4: BaseInputField!
     
     override func viewDidLoad() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class BaseDropDown: BaseInput {
+public class BaseDropDown: BaseInputField {
     lazy var pickerView: UIPickerView = {
         let picker = UIPickerView()
         picker.delegate = self
@@ -46,6 +46,7 @@ public class BaseDropDown: BaseInput {
     var data = ["1","2","3","4","5","6","7","8","9"]
     
     override func setupMiddleView() {
+        super.setupMiddleView()
         rightButton.setImage(ImageProvider.image(named: "ic_chevron_down"), for: .normal)
         textField.inputView = pickerView
         textField.inputAccessoryView = toolbarPicker
