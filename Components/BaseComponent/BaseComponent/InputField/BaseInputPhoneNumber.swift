@@ -20,7 +20,6 @@ public class BaseInputPhoneNumber: BaseInputField {
         middleView.addSubview(countryCodeView)
         textField.textAlignment = .left
         titleLabel.textAlignment = .left
-        countryCodeView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         
         NSLayoutConstraint.activate([
             countryCodeView.topAnchor.constraint(greaterThanOrEqualTo: middleView.topAnchor),

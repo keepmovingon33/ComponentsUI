@@ -196,6 +196,9 @@ public class BaseInputField: UIView {
         
         underlineAnimationWidthConstraint = underlineAnimationView.widthAnchor.constraint(equalToConstant: 0)
         underlineAnimationWidthConstraint?.isActive = true
+        let leadingTitleAnchor = titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
+        leadingTitleAnchor.priority = .defaultHigh
+        leadingTitleAnchor.isActive = true
         
         stateChanged()
         setupMiddleView()
@@ -214,9 +217,7 @@ public class BaseInputField: UIView {
             rightButton.centerYAnchor.constraint(equalTo: middleView.centerYAnchor),
             rightButton.trailingAnchor.constraint(equalTo: middleView.trailingAnchor),
             rightButton.widthAnchor.constraint(equalToConstant: Spacing.medium),
-            rightButton.heightAnchor.constraint(equalToConstant: Spacing.medium),
-            
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
+            rightButton.heightAnchor.constraint(equalToConstant: Spacing.medium)
         ])
     }
     
