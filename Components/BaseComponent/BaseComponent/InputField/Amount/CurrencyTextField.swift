@@ -30,6 +30,10 @@ public class CurrencyTextField: UITextField {
     }
 
     private func commonInit() {
+        self.attributedText = getCurrency(value: enteredNumbers.asCurrency(locale: locale) ?? "")
+        keyboardType = .numberPad
+        sizeToFit()
+        contentVerticalAlignment = .center
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
 
@@ -58,8 +62,8 @@ public class CurrencyTextField: UITextField {
         guard let symbol = locale.currencySymbol else { return nil }
         let fullText = value.contains(symbol) ? value : "\(symbol)\(value)"
         let symbolRange = NSString(string: fullText).range(of: symbol)
-        let symbolAttribute = Typesetting.mediumTitle.at(weight: .semiBold)
-        let resultString = NSMutableAttributedString(string: value, typesetting: Typesetting.xlargeTitle)
+        let symbolAttribute = Typesetting.mediumTitle.at(weight: .semiBold).centered
+        let resultString = NSMutableAttributedString(string: value, typesetting: Typesetting.xlargeTitle.centered)
         resultString.setAttributes(symbolAttribute.attributes, range: symbolRange)
 
         resultString.addAttribute(NSAttributedString.Key.kern, value: 4, range: symbolRange)

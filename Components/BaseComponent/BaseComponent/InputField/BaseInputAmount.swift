@@ -12,18 +12,18 @@ public class BaseInputAmount: BaseInputField {
         let textField = CurrencyTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.delegate = self
+        textField.textAlignment = .center
+        textField.clipsToBounds = true
         return textField
     }()
     override func setupMiddleView() {
-        super.setupMiddleView()
         middleView.addSubview(inputAmount)
         
         NSLayoutConstraint.activate([
             inputAmount.topAnchor.constraint(equalTo: middleView.topAnchor),
-            inputAmount.bottomAnchor.constraint(equalTo: middleView.bottomAnchor),
-            inputAmount.centerXAnchor.constraint(equalTo: middleView.centerXAnchor),
-            inputAmount.trailingAnchor.constraint(equalTo: middleView.trailingAnchor, constant: -Spacing.large),
-            inputAmount.heightAnchor.constraint(greaterThanOrEqualToConstant: 26)
+            inputAmount.bottomAnchor.constraint(equalTo: middleView.bottomAnchor, constant: -Spacing.normal),
+            inputAmount.leadingAnchor.constraint(equalTo: middleView.leadingAnchor),
+            inputAmount.trailingAnchor.constraint(equalTo: middleView.trailingAnchor)
         ])
         
         textField.removeFromSuperview()
