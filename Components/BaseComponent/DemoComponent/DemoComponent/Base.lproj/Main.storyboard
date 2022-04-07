@@ -268,7 +268,7 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-dl-3T3" customClass="BaseInputPhoneNumber" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="132" width="382" height="50"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputField" customModule="BaseComponent">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputAmount" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="198" width="382" height="50"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j12-dg-sD3" customClass="PrimaryButton" customModule="BaseComponent">
