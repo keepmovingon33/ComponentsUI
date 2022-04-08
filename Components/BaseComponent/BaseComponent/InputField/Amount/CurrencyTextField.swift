@@ -8,7 +8,7 @@
 import UIKit
 
 public class CurrencyTextField: UITextField {
-    public var maximumDigit = 15
+    public var maximumDigit = 9
     public var maximumAmountValue = Double.infinity
     private var defaultValue = 0.00
     
@@ -18,6 +18,13 @@ public class CurrencyTextField: UITextField {
     private var didBackspace = false
 
     var locale: Locale = Locale(identifier: "en_PH")
+    
+    public var inputState: InputState = .blank {
+        didSet {
+            guard inputState != oldValue else { return }
+            self.attributedText = getCurrency(value: enteredNumbers.asCurrency(locale: locale) ?? "")
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,8 +39,6 @@ public class CurrencyTextField: UITextField {
     private func commonInit() {
         self.attributedText = getCurrency(value: enteredNumbers.asCurrency(locale: locale) ?? "")
         keyboardType = .numberPad
-        sizeToFit()
-        contentVerticalAlignment = .center
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
 
@@ -62,13 +67,24 @@ public class CurrencyTextField: UITextField {
         guard let symbol = locale.currencySymbol else { return nil }
         let fullText = value.contains(symbol) ? value : "\(symbol)\(value)"
         let symbolRange = NSString(string: fullText).range(of: symbol)
-        let symbolAttribute = Typesetting.mediumTitle.at(weight: .semiBold).centered
-        let resultString = NSMutableAttributedString(string: value, typesetting: Typesetting.xlargeTitle.centered)
+        let symbolAttribute = Typesetting.mediumTitle.at(weight: .semiBold).at(color: inputState.getInputColor()).centered
+        let resultString = NSMutableAttributedString(string: value, typesetting: Typesetting.xlargeTitle.at(color: inputState.getInputColor()).centered)
         resultString.setAttributes(symbolAttribute.attributes, range: symbolRange)
-
-        resultString.addAttribute(NSAttributedString.Key.kern, value: 4, range: symbolRange)
-        resultString.addAttribute(NSAttributedString.Key.baselineOffset, value: 21, range: symbolRange)
+        // padding ben phai cua peso so voi value
+        resultString.addAttribute(NSAttributedString.Key.kern, value: Spacing.tiny, range: symbolRange)
+        // padding bottom cua peso so voi input
+        resultString.addAttribute(NSAttributedString.Key.baselineOffset, value: Spacing.big, range: symbolRange)
+        resultString.addAttribute(NSAttributedString.Key.baselineOffset, value: Spacing.small, range: NSString(string: fullText).range(of: String(fullText.dropFirst())))
         return resultString
+    }
+    
+    // kiem tra coi co input duoc hay ko
+    func shouldChangeCharacter(range: NSRange, replacement: String) -> Bool {
+        guard let textInput = self.text as NSString? else { return false }
+        let toUpdateText = textInput.replacingCharacters(in: range, with: replacement)
+        
+        guard toUpdateText.digits.count <= maximumDigit else { return false }
+        return true
     }
 }
 
@@ -88,5 +104,10 @@ private extension String {
         } else {
             return Formatter.currency.string(from: NSNumber(value: (Double(self) ?? 0) / 100))
         }
+    }
+    
+    var digits: String {
+        return components(separatedBy: CharacterSet.decimalDigits.inverted)
+            .joined()
     }
 }

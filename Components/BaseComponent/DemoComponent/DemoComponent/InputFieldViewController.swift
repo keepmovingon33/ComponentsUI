@@ -34,5 +34,6 @@ class InputFieldViewController: UIViewController {
         inputField.errorMessage = "invalid"
         inputField2.errorMessage = "invalid username"
         inputField3.errorMessage = "invalid phoneNumber"
+        inputField4.errorMessage = "invalid amount"
     }
 }
