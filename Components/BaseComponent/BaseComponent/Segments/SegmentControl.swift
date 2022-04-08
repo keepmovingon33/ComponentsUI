@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-public class SegmentControl: UIView {
+public class SegmentControl: BaseView {
     
     // MARK: - Inspectable Variable
     @IBInspectable var normalTitleColor: UIColor = BaseColor.Grey.grey_100
@@ -29,19 +29,6 @@ public class SegmentControl: UIView {
     // thumbView la view khi minh select vao thi no se chay tu trai sang phai hay nguoc lai
     public lazy var thumbView: UIView = UIView(frame: self.bounds)
     
-    // init cho code tay
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        initView()
-    }
-    
-    // init cho xib file
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        initView()
-    }
     
     // reload lai UI, cap nhat frame
     public override func layoutSubviews() {
@@ -50,8 +37,9 @@ public class SegmentControl: UIView {
         layoutItem()
     }
     
-    // set UIView cho segment va thumbView
-    public func initView() {
+    public override func setupView() {
+        super.setupView()
+        
         thumbView.backgroundColor = selectedBackgroundColor
         self.addSubview(thumbView)
         self.backgroundColor = normalBackgroundColor

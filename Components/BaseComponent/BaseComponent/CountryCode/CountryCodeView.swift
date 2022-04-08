@@ -16,7 +16,7 @@ public struct CountryCode {
     }
 }
 
-public class CountryCodeView: UIView {
+public class CountryCodeView: BaseView {
     var selectedCountry = CountryCode(code: "+63", image: ImageProvider.image(named: "ic_flag_PH")) {
         didSet {
             flagImageView.image = selectedCountry.image
@@ -50,17 +50,8 @@ public class CountryCodeView: UIView {
         return stackView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUI()
-    }
-    
-    private func setupUI() {
+    public override func setupView() {
+        super.setupView()
         self.addSubview(mainStackView)
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -75,5 +66,4 @@ public class CountryCodeView: UIView {
             dropDownImage.heightAnchor.constraint(equalToConstant: Spacing.medium)
         ])
     }
-    
 }

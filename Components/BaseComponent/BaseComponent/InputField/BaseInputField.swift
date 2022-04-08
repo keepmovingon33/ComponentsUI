@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class BaseInputField: UIView {
+public class BaseInputField: BaseView {
     
     lazy var contentView: UIView = {
         let view = UIView()
@@ -145,22 +145,14 @@ public class BaseInputField: UIView {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUI()
-    }
-    
     @objc func rightButtonTapped(_ input: UIButton) {
         textField.text = ""
         rightButton.isHidden = true
     }
     
-    public func setupUI() {
+    public override func setupView() {
+        super.setupView()
+        
         self.addSubview(contentView)
         // constraints for contentView
         NSLayoutConstraint.activate([

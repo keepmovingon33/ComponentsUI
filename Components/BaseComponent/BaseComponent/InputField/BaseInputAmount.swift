@@ -18,15 +18,26 @@ public class BaseInputAmount: BaseInputField {
         return textField
     }()
     
+    lazy var amountHelperView: AmountHelperView = {
+        let view = AmountHelperView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override func setupMiddleView() {
         middleView.addSubview(inputAmount)
+        contentView.addSubview(amountHelperView)
         
         NSLayoutConstraint.activate([
             inputAmount.topAnchor.constraint(equalTo: middleView.topAnchor),
             inputAmount.bottomAnchor.constraint(equalTo: middleView.bottomAnchor, constant: -Spacing.tiny),
             inputAmount.leadingAnchor.constraint(equalTo: middleView.leadingAnchor),
             inputAmount.trailingAnchor.constraint(equalTo: middleView.trailingAnchor),
-            middleView.topAnchor.constraint(equalTo: contentView.topAnchor)
+            middleView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            
+            amountHelperView.topAnchor.constraint(equalTo: underlineView.bottomAnchor, constant: Spacing.tiny),
+            amountHelperView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            amountHelperView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
         
         textField.removeFromSuperview()

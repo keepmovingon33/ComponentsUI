@@ -10,7 +10,7 @@ import UIKit
 public class SegmentControlBig: SegmentControl {
     public var padding: CGFloat = 8
     
-    public override func initView() {
+    public override func setupView() {
         // do nothing in segment control big. minh override de no ko phai function giong nhu thang segmentControl
     }
     

@@ -87,27 +87,3 @@ public class CurrencyTextField: UITextField {
         return true
     }
 }
-
-private extension Formatter {
-    static let currency: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        return formatter
-    }()
-}
-
-private extension String {
-    func asCurrency(locale: Locale) -> String? {
-        Formatter.currency.locale = locale
-        if self.isEmpty {
-            return Formatter.currency.string(from: NSNumber(value: 0))
-        } else {
-            return Formatter.currency.string(from: NSNumber(value: (Double(self) ?? 0) / 100))
-        }
-    }
-    
-    var digits: String {
-        return components(separatedBy: CharacterSet.decimalDigits.inverted)
-            .joined()
-    }
-}
