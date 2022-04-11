@@ -26,7 +26,7 @@ public struct Provider {
 }
 
 public class AmountHelperView: BaseView {
-    public var provider: Provider = Provider(image: ImageProvider.image(named: "instaPay"), helperText: "Instant Transfer", fee: 15.0)
+    public var provider: Provider = Provider(image: ImageProvider.image(named: "ic_inputGoTyme"), helperText: "Instant Transfer", fee: 15.0)
     
     lazy var providerImageView: UIImageView = {
         let imageView = UIImageView(image: provider.image)

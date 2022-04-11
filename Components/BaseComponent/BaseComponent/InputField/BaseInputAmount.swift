@@ -37,7 +37,8 @@ public class BaseInputAmount: BaseInputField {
             
             amountHelperView.topAnchor.constraint(equalTo: underlineView.bottomAnchor, constant: Spacing.tiny),
             amountHelperView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            amountHelperView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            amountHelperView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            amountHelperView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
         textField.removeFromSuperview()
@@ -47,6 +48,11 @@ public class BaseInputAmount: BaseInputField {
     
     override func updateInputField() {
         inputAmount.inputState = inputState
+    }
+    
+    override func updateErrorMessage() {
+        super.updateErrorMessage()
+        amountHelperView.isHidden = inputState == .error
     }
     
     override func textFieldDidChange(_ textField: UITextField) {

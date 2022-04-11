@@ -257,7 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-gB-WR5">
-                                <rect key="frame" x="16" y="16" width="382" height="304"/>
+                                <rect key="frame" x="16" y="16" width="382" height="248"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-p8-XKd" customClass="BaseDropDown" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
@@ -271,26 +271,29 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputAmount" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="198" width="382" height="50"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j12-dg-sD3" customClass="PrimaryButton" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="264" width="382" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="paP-4U-xxW"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Submit"/>
-                                        <connections>
-                                            <action selector="submitButtonTapped:" destination="DKY-Wg-WQl" eventType="touchUpInside" id="bCx-WL-JAk"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j12-dg-sD3" customClass="PrimaryButton" customModule="BaseComponent">
+                                <rect key="frame" x="16" y="401" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="paP-4U-xxW"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="DKY-Wg-WQl" eventType="touchUpInside" id="bCx-WL-JAk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l3s-pe-IYd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SbR-gB-WR5" firstAttribute="top" secondItem="l3s-pe-IYd" secondAttribute="top" constant="16" id="L5h-k8-6dh"/>
                             <constraint firstItem="l3s-pe-IYd" firstAttribute="trailing" secondItem="SbR-gB-WR5" secondAttribute="trailing" constant="16" id="Tqj-ur-Lhg"/>
+                            <constraint firstItem="j12-dg-sD3" firstAttribute="leading" secondItem="l3s-pe-IYd" secondAttribute="leading" constant="16" id="moF-VB-7PT"/>
                             <constraint firstItem="SbR-gB-WR5" firstAttribute="leading" secondItem="l3s-pe-IYd" secondAttribute="leading" constant="16" id="ngw-34-qji"/>
+                            <constraint firstItem="j12-dg-sD3" firstAttribute="top" secondItem="SbR-gB-WR5" secondAttribute="bottom" constant="50" id="o4X-Pm-yld"/>
+                            <constraint firstItem="l3s-pe-IYd" firstAttribute="trailing" secondItem="j12-dg-sD3" secondAttribute="trailing" constant="16" id="wef-qU-dDM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KNB-Oq-bng"/>

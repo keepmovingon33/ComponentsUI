@@ -180,8 +180,9 @@ public class BaseInputField: BaseView {
             messageStackView.topAnchor.constraint(equalTo: underlineView.bottomAnchor, constant: Spacing.tiny),
             messageStackView.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: Spacing.medium),
             messageStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            
             messageStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            messageStackView.heightAnchor.constraint(equalToConstant: Spacing.medium),
+            
             messageImage.widthAnchor.constraint(equalToConstant: Spacing.medium),
             messageImage.heightAnchor.constraint(equalToConstant: Spacing.medium)
         ])
@@ -251,7 +252,7 @@ public class BaseInputField: BaseView {
         messageImage.isHidden = true
     }
     
-    private func updateErrorMessage() {
+    func updateErrorMessage() {
         guard let message = errorMessage, inputState == .error else {
             messageLabel.isHidden = true
             messageImage.isHidden = true
