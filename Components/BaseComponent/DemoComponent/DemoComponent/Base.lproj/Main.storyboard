@@ -65,6 +65,29 @@
                                             <segue destination="Crk-Ur-oyJ" kind="show" id="SKX-cI-7dF"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="8CS-J0-K93">
+                                        <rect key="frame" x="0.0" y="212.5" width="414" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8CS-J0-K93" id="SK0-8b-vso">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InputField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U1-kJ-otN">
+                                                    <rect key="frame" x="169.5" y="31.5" width="75.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9U1-kJ-otN" firstAttribute="centerY" secondItem="SK0-8b-vso" secondAttribute="centerY" id="s2H-EV-atd"/>
+                                                <constraint firstItem="9U1-kJ-otN" firstAttribute="centerX" secondItem="SK0-8b-vso" secondAttribute="centerX" id="uxF-eb-Xwn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="DKY-Wg-WQl" kind="show" id="ngs-Hi-rkb"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -177,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNP-SV-fRs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="-305"/>
+            <point key="canvasLocation" x="228" y="-779"/>
         </scene>
         <!--Segment View Controller-->
         <scene sceneID="Pwo-GL-Mh5">
@@ -223,7 +246,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9T5-mz-o7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="369"/>
+            <point key="canvasLocation" x="878" y="-346"/>
+        </scene>
+        <!--Input Field View Controller-->
+        <scene sceneID="WOr-Yn-s5Z">
+            <objects>
+                <viewController id="DKY-Wg-WQl" customClass="InputFieldViewController" customModule="DemoComponent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pv2-FQ-AOC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-gB-WR5">
+                                <rect key="frame" x="16" y="16" width="382" height="248"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-p8-XKd" customClass="BaseDropDown" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-4p-mDB" customClass="BaseInputField" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="66" width="382" height="50"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-dl-3T3" customClass="BaseInputPhoneNumber" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="132" width="382" height="50"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputAmount" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="198" width="382" height="50"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j12-dg-sD3" customClass="PrimaryButton" customModule="BaseComponent">
+                                <rect key="frame" x="16" y="401" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="paP-4U-xxW"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="DKY-Wg-WQl" eventType="touchUpInside" id="bCx-WL-JAk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l3s-pe-IYd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SbR-gB-WR5" firstAttribute="top" secondItem="l3s-pe-IYd" secondAttribute="top" constant="16" id="L5h-k8-6dh"/>
+                            <constraint firstItem="l3s-pe-IYd" firstAttribute="trailing" secondItem="SbR-gB-WR5" secondAttribute="trailing" constant="16" id="Tqj-ur-Lhg"/>
+                            <constraint firstItem="j12-dg-sD3" firstAttribute="leading" secondItem="l3s-pe-IYd" secondAttribute="leading" constant="16" id="moF-VB-7PT"/>
+                            <constraint firstItem="SbR-gB-WR5" firstAttribute="leading" secondItem="l3s-pe-IYd" secondAttribute="leading" constant="16" id="ngw-34-qji"/>
+                            <constraint firstItem="j12-dg-sD3" firstAttribute="top" secondItem="SbR-gB-WR5" secondAttribute="bottom" constant="50" id="o4X-Pm-yld"/>
+                            <constraint firstItem="l3s-pe-IYd" firstAttribute="trailing" secondItem="j12-dg-sD3" secondAttribute="trailing" constant="16" id="wef-qU-dDM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KNB-Oq-bng"/>
+                    <connections>
+                        <outlet property="inputField" destination="w9w-p8-XKd" id="KR0-XJ-rvf"/>
+                        <outlet property="inputField2" destination="ZaN-4p-mDB" id="xS0-QU-Fet"/>
+                        <outlet property="inputField3" destination="NsC-dl-3T3" id="8tI-wP-mNT"/>
+                        <outlet property="inputField4" destination="iGS-kY-FlU" id="7x3-Md-ng3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSF-gt-Dzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="201"/>
         </scene>
     </scenes>
     <designables>
@@ -247,6 +330,9 @@
         </designable>
         <designable name="hZG-o1-HVF">
             <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="j12-dg-sD3">
+            <size key="intrinsicContentSize" width="49" height="30"/>
         </designable>
         <designable name="zSf-ub-vLf">
             <size key="intrinsicContentSize" width="91" height="17"/>

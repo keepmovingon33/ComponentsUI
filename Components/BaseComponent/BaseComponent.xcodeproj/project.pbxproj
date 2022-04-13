@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3302B3B027F3D3AC000E006F /* Spacing.swift */; };
+		3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */; };
+		3340A84227F7C20800D800B6 /* BaseInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84127F7C20800D800B6 /* BaseInputField.swift */; };
+		3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84327F7C54F00D800B6 /* BaseDropDown.swift */; };
+		3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0B927FBB684000C1A58 /* BaseInputPhoneNumber.swift */; };
+		3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0BD27FBB6F7000C1A58 /* CountryCodeView.swift */; };
+		3378F0C027FD06CA000C1A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0BF27FD06CA000C1A58 /* String+Extension.swift */; };
+		3378F0C227FDC9A1000C1A58 /* BaseInputAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0C127FDC9A1000C1A58 /* BaseInputAmount.swift */; };
+		3378F0C527FDCB0C000C1A58 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0C427FDCB0C000C1A58 /* CurrencyTextField.swift */; };
+		3378F0C728006C5E000C1A58 /* AmountHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0C628006C5E000C1A58 /* AmountHelperView.swift */; };
+		3378F0C928006D15000C1A58 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0C828006D15000C1A58 /* BaseView.swift */; };
+		3378F0CB280071DD000C1A58 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0CA280071DD000C1A58 /* Formatter+Extension.swift */; };
 		337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3BE27CD057D00045F2C /* RippleButton.swift */; };
 		337AA3D027CD057D00045F2C /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3C027CD057D00045F2C /* LoadingButton.swift */; };
 		337AA3D127CD057D00045F2C /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3C127CD057D00045F2C /* ButtonComponent.swift */; };
@@ -61,6 +73,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3302B3B027F3D3AC000E006F /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseInputField+Style.swift"; sourceTree = "<group>"; };
+		3340A84127F7C20800D800B6 /* BaseInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputField.swift; sourceTree = "<group>"; };
+		3340A84327F7C54F00D800B6 /* BaseDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropDown.swift; sourceTree = "<group>"; };
+		3378F0B927FBB684000C1A58 /* BaseInputPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputPhoneNumber.swift; sourceTree = "<group>"; };
+		3378F0BD27FBB6F7000C1A58 /* CountryCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeView.swift; sourceTree = "<group>"; };
+		3378F0BF27FD06CA000C1A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3378F0C127FDC9A1000C1A58 /* BaseInputAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputAmount.swift; sourceTree = "<group>"; };
+		3378F0C427FDCB0C000C1A58 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		3378F0C628006C5E000C1A58 /* AmountHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountHelperView.swift; sourceTree = "<group>"; };
+		3378F0C828006D15000C1A58 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		3378F0CA280071DD000C1A58 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		337AA3AB27CD044200045F2C /* DemoComponent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DemoComponent.xcodeproj; path = DemoComponent/DemoComponent.xcodeproj; sourceTree = SOURCE_ROOT; };
 		337AA3BE27CD057D00045F2C /* RippleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleButton.swift; sourceTree = "<group>"; };
 		337AA3C027CD057D00045F2C /* LoadingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
@@ -117,6 +141,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3302B3AB27F3D002000E006F /* InputField */ = {
+			isa = PBXGroup;
+			children = (
+				3378F0C327FDCAF5000C1A58 /* Amount */,
+				3340A84327F7C54F00D800B6 /* BaseDropDown.swift */,
+				3340A84127F7C20800D800B6 /* BaseInputField.swift */,
+				3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */,
+				3378F0B927FBB684000C1A58 /* BaseInputPhoneNumber.swift */,
+				3378F0C127FDC9A1000C1A58 /* BaseInputAmount.swift */,
+			);
+			path = InputField;
+			sourceTree = "<group>";
+		};
+		3302B3AF27F3D39B000E006F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3302B3B027F3D3AC000E006F /* Spacing.swift */,
+				3378F0C828006D15000C1A58 /* BaseView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3378F0BC27FBB6D8000C1A58 /* CountryCode */ = {
+			isa = PBXGroup;
+			children = (
+				3378F0BD27FBB6F7000C1A58 /* CountryCodeView.swift */,
+			);
+			path = CountryCode;
+			sourceTree = "<group>";
+		};
+		3378F0C327FDCAF5000C1A58 /* Amount */ = {
+			isa = PBXGroup;
+			children = (
+				3378F0C427FDCB0C000C1A58 /* CurrencyTextField.swift */,
+				3378F0C628006C5E000C1A58 /* AmountHelperView.swift */,
+			);
+			path = Amount;
+			sourceTree = "<group>";
+		};
 		337AA38A27CD041B00045F2C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +233,8 @@
 				337AA3CC27CD057D00045F2C /* UIColor+Extension.swift */,
 				337AA3CD27CD057D00045F2C /* UIView+Extension.swift */,
 				337AA3E227CD132D00045F2C /* UIImage+Extension.swift */,
+				3378F0BF27FD06CA000C1A58 /* String+Extension.swift */,
+				3378F0CA280071DD000C1A58 /* Formatter+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -272,15 +337,18 @@
 		33AE4CC227CD020B00B6F8CD /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
+				3378F0BC27FBB6D8000C1A58 /* CountryCode */,
 				33AE4CC327CD020B00B6F8CD /* BaseComponent.h */,
 				337AA3BD27CD057D00045F2C /* Buttons */,
 				337AA3C827CD057D00045F2C /* Colors */,
+				3302B3AF27F3D39B000E006F /* Common */,
 				337AA3CB27CD057D00045F2C /* Extension */,
 				337F537A27CE4E6A009D9894 /* Fonts */,
+				3302B3AB27F3D002000E006F /* InputField */,
 				337AA3C227CD057D00045F2C /* ProgressView */,
 				337AA3DF27CD12B200045F2C /* Resources */,
-				337F537127CE4E6A009D9894 /* Stylist */,
 				337C472027D6478F008FAF6A /* Segments */,
+				337F537127CE4E6A009D9894 /* Stylist */,
 				337F536727CE4E6A009D9894 /* Typography */,
 			);
 			path = BaseComponent;
@@ -392,17 +460,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */,
 				337F53A127CE4E6A009D9894 /* NSAttributedString+Typography.swift in Sources */,
 				337F53AD27CE4E6A009D9894 /* BaseFont+Named.swift in Sources */,
+				3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */,
 				337F53AC27CE4E6A009D9894 /* Style+UILabel.swift in Sources */,
 				337C472827D827F8008FAF6A /* SegmentControlBig.swift in Sources */,
+				3340A84227F7C20800D800B6 /* BaseInputField.swift in Sources */,
+				3378F0C928006D15000C1A58 /* BaseView.swift in Sources */,
 				337AA3D627CD057D00045F2C /* ProgressShapeLayer.swift in Sources */,
 				337AA3D527CD057D00045F2C /* StrokeAnimation.swift in Sources */,
 				337F53C827CE4E6A009D9894 /* BaseFont.swift in Sources */,
+				3378F0C728006C5E000C1A58 /* AmountHelperView.swift in Sources */,
 				337AA3D327CD057D00045F2C /* RotationAnimation.swift in Sources */,
 				337F53AA27CE4E6A009D9894 /* Style.swift in Sources */,
 				337AA3D927CD057D00045F2C /* UIColor+Extension.swift in Sources */,
+				3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */,
+				3378F0C227FDC9A1000C1A58 /* BaseInputAmount.swift in Sources */,
 				337AA3D227CD057D00045F2C /* StrokeColorAnimation.swift in Sources */,
+				3378F0CB280071DD000C1A58 /* Formatter+Extension.swift in Sources */,
 				337AA3D027CD057D00045F2C /* LoadingButton.swift in Sources */,
 				337F53A327CE4E6A009D9894 /* String+Typography.swift in Sources */,
 				337F53A227CE4E6A009D9894 /* Transformer.swift in Sources */,
@@ -415,11 +491,15 @@
 				337C472327D647AE008FAF6A /* SegmentControl.swift in Sources */,
 				337F53CA27CE4E6A009D9894 /* UIFont+Weight.swift in Sources */,
 				337AA3D427CD057D00045F2C /* ProgressView.swift in Sources */,
+				3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */,
+				3378F0C027FD06CA000C1A58 /* String+Extension.swift in Sources */,
 				337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */,
 				337AA3D127CD057D00045F2C /* ButtonComponent.swift in Sources */,
 				337F539F27CE4E6A009D9894 /* Typesetting.swift in Sources */,
+				3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */,
 				337AA3D827CD057D00045F2C /* BaseColor.swift in Sources */,
 				337AA3E327CD132D00045F2C /* UIImage+Extension.swift in Sources */,
+				3378F0C527FDCB0C000C1A58 /* CurrencyTextField.swift in Sources */,
 				337F539E27CE4E6A009D9894 /* Typesetting+Named.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
