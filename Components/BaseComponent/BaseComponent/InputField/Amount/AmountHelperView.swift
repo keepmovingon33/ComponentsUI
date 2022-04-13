@@ -17,7 +17,8 @@ public struct Provider {
             return "FREE"
         }
         
-        return "\(String(fee).asCurrency(locale: Locale(identifier: "en-PH")) ?? "") fee"
+        let value = Formatter.currencyWithSpace(locale: Locale(identifier: "en-PH")).string(from: NSNumber(value: fee)) ?? ""
+        return "\(value) fee"
     }
     
     func isFree() -> Bool {

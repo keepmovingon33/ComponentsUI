@@ -14,5 +14,12 @@ public extension Formatter {
         return formatter
     }()
     
-//    static let currencyWith
+    static func currencyWithSpace(locale: Locale) -> NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        let symbol = locale.currencySymbol ?? ""
+        formatter.locale = locale
+        formatter.positivePrefix = "\(formatter.positivePrefix ?? symbol) "
+        return formatter
+    }
 }
