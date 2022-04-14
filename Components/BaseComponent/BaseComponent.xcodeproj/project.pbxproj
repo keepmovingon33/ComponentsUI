@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3302B3B027F3D3AC000E006F /* Spacing.swift */; };
+		3330D1BA280868A900DAAE10 /* BaseSecurityInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1B9280868A900DAAE10 /* BaseSecurityInput.swift */; };
+		3330D1BC2808694B00DAAE10 /* SecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1BB2808694B00DAAE10 /* SecurityView.swift */; };
 		3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */; };
 		3340A84227F7C20800D800B6 /* BaseInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84127F7C20800D800B6 /* BaseInputField.swift */; };
 		3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84327F7C54F00D800B6 /* BaseDropDown.swift */; };
@@ -74,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		3302B3B027F3D3AC000E006F /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		3330D1B9280868A900DAAE10 /* BaseSecurityInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityInput.swift; sourceTree = "<group>"; };
+		3330D1BB2808694B00DAAE10 /* SecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityView.swift; sourceTree = "<group>"; };
 		3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseInputField+Style.swift"; sourceTree = "<group>"; };
 		3340A84127F7C20800D800B6 /* BaseInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputField.swift; sourceTree = "<group>"; };
 		3340A84327F7C54F00D800B6 /* BaseDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropDown.swift; sourceTree = "<group>"; };
@@ -161,6 +165,15 @@
 				3378F0C828006D15000C1A58 /* BaseView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		3330D1B72808680E00DAAE10 /* SecurityInput */ = {
+			isa = PBXGroup;
+			children = (
+				3330D1B9280868A900DAAE10 /* BaseSecurityInput.swift */,
+				3330D1BB2808694B00DAAE10 /* SecurityView.swift */,
+			);
+			path = SecurityInput;
 			sourceTree = "<group>";
 		};
 		3378F0BC27FBB6D8000C1A58 /* CountryCode */ = {
@@ -337,16 +350,17 @@
 		33AE4CC227CD020B00B6F8CD /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
-				3378F0BC27FBB6D8000C1A58 /* CountryCode */,
 				33AE4CC327CD020B00B6F8CD /* BaseComponent.h */,
 				337AA3BD27CD057D00045F2C /* Buttons */,
 				337AA3C827CD057D00045F2C /* Colors */,
 				3302B3AF27F3D39B000E006F /* Common */,
+				3378F0BC27FBB6D8000C1A58 /* CountryCode */,
 				337AA3CB27CD057D00045F2C /* Extension */,
 				337F537A27CE4E6A009D9894 /* Fonts */,
 				3302B3AB27F3D002000E006F /* InputField */,
 				337AA3C227CD057D00045F2C /* ProgressView */,
 				337AA3DF27CD12B200045F2C /* Resources */,
+				3330D1B72808680E00DAAE10 /* SecurityInput */,
 				337C472027D6478F008FAF6A /* Segments */,
 				337F537127CE4E6A009D9894 /* Stylist */,
 				337F536727CE4E6A009D9894 /* Typography */,
@@ -491,9 +505,11 @@
 				337C472327D647AE008FAF6A /* SegmentControl.swift in Sources */,
 				337F53CA27CE4E6A009D9894 /* UIFont+Weight.swift in Sources */,
 				337AA3D427CD057D00045F2C /* ProgressView.swift in Sources */,
+				3330D1BA280868A900DAAE10 /* BaseSecurityInput.swift in Sources */,
 				3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */,
 				3378F0C027FD06CA000C1A58 /* String+Extension.swift in Sources */,
 				337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */,
+				3330D1BC2808694B00DAAE10 /* SecurityView.swift in Sources */,
 				337AA3D127CD057D00045F2C /* ButtonComponent.swift in Sources */,
 				337F539F27CE4E6A009D9894 /* Typesetting.swift in Sources */,
 				3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */,
