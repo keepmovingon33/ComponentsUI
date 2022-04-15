@@ -279,12 +279,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityInput" customModule="BaseComponent">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityInput" customModule="BaseComponent">
                                 <rect key="frame" x="0.0" y="30" width="414" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Jog-Fk-wB5"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3SV-hx-3av"/>
@@ -296,6 +293,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JZM-U5-71O"/>
+                    <connections>
+                        <outlet property="securityInputView" destination="E8m-Yk-Yg7" id="1dq-hh-eLw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaA-Vn-7nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,7 +388,7 @@
             <size key="intrinsicContentSize" width="49" height="30"/>
         </designable>
         <designable name="zSf-ub-vLf">
-            <size key="intrinsicContentSize" width="91" height="17"/>
+            <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
     </designables>
     <resources>

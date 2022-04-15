@@ -77,7 +77,6 @@ public class BaseInputField: BaseView {
     
     lazy var messageLabel: UILabel = {
         let label = UILabel()
-        label.font = BaseFont.caption
         label.numberOfLines = 0
         label.isHidden = true
         return label
