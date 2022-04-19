@@ -162,6 +162,8 @@ extension BaseSecurityPintInput: UITextFieldDelegate {
         } else {
             inputSecurityValue = string
         }
+        
+        // phai return true vi neu return false, string input = "", nen delete event se ko chay
         return true
     }
 }

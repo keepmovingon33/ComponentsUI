@@ -89,10 +89,8 @@ public enum SecurityOTPState {
     
     func getInputColor() -> UIColor {
         switch self {
-        case .empty:
-            return .purple
-        case .filling:
-            return .blue
+        case .empty, .filling:
+            return .clear
         case .filled:
             return BaseColor.Grey.grey_100
         case .error:
