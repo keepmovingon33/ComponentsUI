@@ -12,6 +12,7 @@ class SecurityInputViewController: UIViewController {
     
     @IBOutlet weak var securityPinInputView: BaseSecurityPintInput!
     @IBOutlet weak var securityOTPInputView: BaseSecurityOTPInput!
+    @IBOutlet weak var securityPinSetupInput: BaseSecurityPinSetupInput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,9 @@ class SecurityInputViewController: UIViewController {
         
         securityOTPInputView.helperText = "OTP helper"
         securityOTPInputView.delegate = self
+        
+        securityPinSetupInput.helperText = "Pin Setup helper"
+        securityPinSetupInput.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
         self.view.addGestureRecognizer(tapGesture)

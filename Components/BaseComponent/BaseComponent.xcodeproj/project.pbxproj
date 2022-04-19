@@ -12,6 +12,8 @@
 		3330D1BC2808694B00DAAE10 /* SecurityPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */; };
 		3330D1C2280C5AA600DAAE10 /* SecurityOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */; };
 		3330D1C4280E337000DAAE10 /* BaseSecurityOTPInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */; };
+		3330D1C6280F002F00DAAE10 /* SecurityPinSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C5280F002F00DAAE10 /* SecurityPinSetupView.swift */; };
+		3330D1C8280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C7280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift */; };
 		3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */; };
 		3340A84227F7C20800D800B6 /* BaseInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84127F7C20800D800B6 /* BaseInputField.swift */; };
 		3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84327F7C54F00D800B6 /* BaseDropDown.swift */; };
@@ -82,6 +84,8 @@
 		3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPinView.swift; sourceTree = "<group>"; };
 		3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityOTPView.swift; sourceTree = "<group>"; };
 		3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityOTPInput.swift; sourceTree = "<group>"; };
+		3330D1C5280F002F00DAAE10 /* SecurityPinSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPinSetupView.swift; sourceTree = "<group>"; };
+		3330D1C7280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityPinSetupInput.swift; sourceTree = "<group>"; };
 		3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseInputField+Style.swift"; sourceTree = "<group>"; };
 		3340A84127F7C20800D800B6 /* BaseInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputField.swift; sourceTree = "<group>"; };
 		3340A84327F7C54F00D800B6 /* BaseDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropDown.swift; sourceTree = "<group>"; };
@@ -175,8 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */,
+				3330D1C7280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift */,
 				3330D1B9280868A900DAAE10 /* BaseSecurityPintInput.swift */,
 				3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */,
+				3330D1C5280F002F00DAAE10 /* SecurityPinSetupView.swift */,
 				3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */,
 			);
 			path = SecurityInput;
@@ -482,6 +488,7 @@
 			files = (
 				3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */,
 				337F53A127CE4E6A009D9894 /* NSAttributedString+Typography.swift in Sources */,
+				3330D1C6280F002F00DAAE10 /* SecurityPinSetupView.swift in Sources */,
 				337F53AD27CE4E6A009D9894 /* BaseFont+Named.swift in Sources */,
 				3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */,
 				337F53AC27CE4E6A009D9894 /* Style+UILabel.swift in Sources */,
@@ -524,6 +531,7 @@
 				337AA3D827CD057D00045F2C /* BaseColor.swift in Sources */,
 				337AA3E327CD132D00045F2C /* UIImage+Extension.swift in Sources */,
 				3378F0C527FDCB0C000C1A58 /* CurrencyTextField.swift in Sources */,
+				3330D1C8280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift in Sources */,
 				337F539E27CE4E6A009D9894 /* Typesetting+Named.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

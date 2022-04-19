@@ -280,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-LW-HuJ">
-                                <rect key="frame" x="0.0" y="30" width="414" height="272"/>
+                                <rect key="frame" x="0.0" y="30" width="414" height="416"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityPintInput" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
@@ -288,6 +288,10 @@
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-aa-fX8" customClass="BaseSecurityOTPInput" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="144" width="414" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMJ-3H-dFC" customClass="BaseSecurityPinSetupInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -305,6 +309,7 @@
                     <connections>
                         <outlet property="securityOTPInputView" destination="Wh2-aa-fX8" id="mWX-Uy-dtN"/>
                         <outlet property="securityPinInputView" destination="E8m-Yk-Yg7" id="1dq-hh-eLw"/>
+                        <outlet property="securityPinSetupInput" destination="PMJ-3H-dFC" id="KS8-PB-vpU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaA-Vn-7nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

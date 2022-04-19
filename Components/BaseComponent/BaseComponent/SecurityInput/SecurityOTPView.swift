@@ -11,14 +11,13 @@ public class SecurityOTPView: BaseView {
     
     var state: SecurityOTPState = .empty {
         didSet {
-            underlineView.backgroundColor = state.getUnderlineColor()
-            underlineHeightConstraint?.constant = state.getUnderlineHeight()
+            stateChanged()
         }
     }
     
     var inputValue: String = "" {
         didSet {
-            inputLabel.attributedText = NSAttributedString(string: inputValue, typesetting: Typesetting.smallTitle.centered.at(color: state.getInputColor()))
+            updateInputValue()
         }
     }
     
@@ -58,6 +57,15 @@ public class SecurityOTPView: BaseView {
         
         underlineHeightConstraint = underlineView.heightAnchor.constraint(equalToConstant: 1)
         underlineHeightConstraint?.isActive = true
+    }
+    
+    func stateChanged() {
+        underlineView.backgroundColor = state.getUnderlineColor()
+        underlineHeightConstraint?.constant = state.getUnderlineHeight()
+    }
+    
+    func updateInputValue() {
+        inputLabel.attributedText = NSAttributedString(string: inputValue, typesetting: Typesetting.smallTitle.centered.at(color: state.getInputColor()))
     }
 }
 
