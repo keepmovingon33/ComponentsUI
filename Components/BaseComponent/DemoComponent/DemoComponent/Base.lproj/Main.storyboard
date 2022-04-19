@@ -279,22 +279,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityInput" customModule="BaseComponent">
-                                <rect key="frame" x="0.0" y="30" width="414" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-LW-HuJ">
+                                <rect key="frame" x="0.0" y="30" width="414" height="272"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityPintInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-aa-fX8" customClass="BaseSecurityOTPInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="144" width="414" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3SV-hx-3av"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="E8m-Yk-Yg7" firstAttribute="top" secondItem="3SV-hx-3av" secondAttribute="top" constant="30" id="HFq-Xt-NXU"/>
-                            <constraint firstItem="3SV-hx-3av" firstAttribute="trailing" secondItem="E8m-Yk-Yg7" secondAttribute="trailing" id="gNn-tj-Syz"/>
-                            <constraint firstItem="E8m-Yk-Yg7" firstAttribute="leading" secondItem="3SV-hx-3av" secondAttribute="leading" id="r00-mG-Lpl"/>
+                            <constraint firstItem="5GQ-LW-HuJ" firstAttribute="top" secondItem="3SV-hx-3av" secondAttribute="top" constant="20" id="1Qn-cP-2ob"/>
+                            <constraint firstItem="5GQ-LW-HuJ" firstAttribute="leading" secondItem="3SV-hx-3av" secondAttribute="leading" id="JiY-0j-Soh"/>
+                            <constraint firstItem="5GQ-LW-HuJ" firstAttribute="trailing" secondItem="3SV-hx-3av" secondAttribute="trailing" id="KLB-is-RPV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JZM-U5-71O"/>
                     <connections>
-                        <outlet property="securityInputView" destination="E8m-Yk-Yg7" id="1dq-hh-eLw"/>
+                        <outlet property="securityOTPInputView" destination="Wh2-aa-fX8" id="mWX-Uy-dtN"/>
+                        <outlet property="securityPinInputView" destination="E8m-Yk-Yg7" id="1dq-hh-eLw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaA-Vn-7nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

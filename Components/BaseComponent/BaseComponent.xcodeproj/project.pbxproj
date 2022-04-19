@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3302B3B027F3D3AC000E006F /* Spacing.swift */; };
-		3330D1BA280868A900DAAE10 /* BaseSecurityInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1B9280868A900DAAE10 /* BaseSecurityInput.swift */; };
-		3330D1BC2808694B00DAAE10 /* SecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1BB2808694B00DAAE10 /* SecurityView.swift */; };
+		3330D1BA280868A900DAAE10 /* BaseSecurityPintInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1B9280868A900DAAE10 /* BaseSecurityPintInput.swift */; };
+		3330D1BC2808694B00DAAE10 /* SecurityPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */; };
+		3330D1C2280C5AA600DAAE10 /* SecurityOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */; };
+		3330D1C4280E337000DAAE10 /* BaseSecurityOTPInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */; };
 		3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */; };
 		3340A84227F7C20800D800B6 /* BaseInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84127F7C20800D800B6 /* BaseInputField.swift */; };
 		3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84327F7C54F00D800B6 /* BaseDropDown.swift */; };
@@ -76,8 +78,10 @@
 
 /* Begin PBXFileReference section */
 		3302B3B027F3D3AC000E006F /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
-		3330D1B9280868A900DAAE10 /* BaseSecurityInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityInput.swift; sourceTree = "<group>"; };
-		3330D1BB2808694B00DAAE10 /* SecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityView.swift; sourceTree = "<group>"; };
+		3330D1B9280868A900DAAE10 /* BaseSecurityPintInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityPintInput.swift; sourceTree = "<group>"; };
+		3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPinView.swift; sourceTree = "<group>"; };
+		3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityOTPView.swift; sourceTree = "<group>"; };
+		3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityOTPInput.swift; sourceTree = "<group>"; };
 		3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseInputField+Style.swift"; sourceTree = "<group>"; };
 		3340A84127F7C20800D800B6 /* BaseInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputField.swift; sourceTree = "<group>"; };
 		3340A84327F7C54F00D800B6 /* BaseDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropDown.swift; sourceTree = "<group>"; };
@@ -170,8 +174,10 @@
 		3330D1B72808680E00DAAE10 /* SecurityInput */ = {
 			isa = PBXGroup;
 			children = (
-				3330D1B9280868A900DAAE10 /* BaseSecurityInput.swift */,
-				3330D1BB2808694B00DAAE10 /* SecurityView.swift */,
+				3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */,
+				3330D1B9280868A900DAAE10 /* BaseSecurityPintInput.swift */,
+				3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */,
+				3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */,
 			);
 			path = SecurityInput;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 				3378F0C728006C5E000C1A58 /* AmountHelperView.swift in Sources */,
 				337AA3D327CD057D00045F2C /* RotationAnimation.swift in Sources */,
 				337F53AA27CE4E6A009D9894 /* Style.swift in Sources */,
+				3330D1C2280C5AA600DAAE10 /* SecurityOTPView.swift in Sources */,
 				337AA3D927CD057D00045F2C /* UIColor+Extension.swift in Sources */,
 				3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */,
 				3378F0C227FDC9A1000C1A58 /* BaseInputAmount.swift in Sources */,
@@ -496,6 +503,7 @@
 				337AA3D027CD057D00045F2C /* LoadingButton.swift in Sources */,
 				337F53A327CE4E6A009D9894 /* String+Typography.swift in Sources */,
 				337F53A227CE4E6A009D9894 /* Transformer.swift in Sources */,
+				3330D1C4280E337000DAAE10 /* BaseSecurityOTPInput.swift in Sources */,
 				337AA3DA27CD057D00045F2C /* UIView+Extension.swift in Sources */,
 				337F53C927CE4E6A009D9894 /* BaseFont+Size.swift in Sources */,
 				337F53A427CE4E6A009D9894 /* AttributeTransformer.swift in Sources */,
@@ -505,11 +513,11 @@
 				337C472327D647AE008FAF6A /* SegmentControl.swift in Sources */,
 				337F53CA27CE4E6A009D9894 /* UIFont+Weight.swift in Sources */,
 				337AA3D427CD057D00045F2C /* ProgressView.swift in Sources */,
-				3330D1BA280868A900DAAE10 /* BaseSecurityInput.swift in Sources */,
+				3330D1BA280868A900DAAE10 /* BaseSecurityPintInput.swift in Sources */,
 				3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */,
 				3378F0C027FD06CA000C1A58 /* String+Extension.swift in Sources */,
 				337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */,
-				3330D1BC2808694B00DAAE10 /* SecurityView.swift in Sources */,
+				3330D1BC2808694B00DAAE10 /* SecurityPinView.swift in Sources */,
 				337AA3D127CD057D00045F2C /* ButtonComponent.swift in Sources */,
 				337F539F27CE4E6A009D9894 /* Typesetting.swift in Sources */,
 				3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */,

@@ -7,11 +7,11 @@
 
 import UIKit
 
-public class SecurityView: BaseView {
-    var securityState: SecurityState = .empty {
+public class SecurityPinView: BaseView {
+    var state: SecurityState = .empty {
         didSet {
             // moi lan state thay doi, thi no se run lai didSet. No co the run nhieu lan, khac voi line 21
-            mainView.backgroundColor = securityState.mainColor
+            mainView.backgroundColor = state.mainColor
         }
     }
     
@@ -19,7 +19,7 @@ public class SecurityView: BaseView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         // khi moi vo, no se set mau cho cai mainView lan dau tien. Va line nay chi run duy nhat 1 lan
-        view.backgroundColor = securityState.mainColor
+        view.backgroundColor = state.mainColor
         return view
     }()
     

@@ -8,10 +8,10 @@
 import UIKit
 
 public protocol BaseSecurityInputDelegate {
-    func valueDidFill(value: String)
+    func valueDidFill(securityInput: BaseSecurityPintInput, value: String)
 }
 
-public class BaseSecurityInput: BaseView {
+public class BaseSecurityPintInput: BaseView {
     
     public var maximumLength: Int = 6
     public var inputSecurityValue: String = "" {
@@ -81,16 +81,11 @@ public class BaseSecurityInput: BaseView {
         self.addSubview(hiddenTextField)
         self.addSubview(messageStackView)
         
-        for index in 0..<maximumLength {
-            let view = SecurityView()
-            view.tag = index + 1000
-            mainStackView.addArrangedSubview(view)
-        }
+        setupSecurityView()
         
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: self.topAnchor),
             mainStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            mainStackView.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor),
             
             hiddenTextField.topAnchor.constraint(equalTo: mainStackView.topAnchor),
             hiddenTextField.centerXAnchor.constraint(equalTo: mainStackView.centerXAnchor),
@@ -108,6 +103,16 @@ public class BaseSecurityInput: BaseView {
         ])
     }
     
+    func setupSecurityView() {
+        for index in 0..<maximumLength {
+            let view = SecurityPinView()
+            view.tag = index + 1000
+            mainStackView.addArrangedSubview(view)
+        }
+        
+        mainStackView.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor).isActive = true
+    }
+    
     private func valueChange() {
         fillSecurityInputView(isError: false)
         guard inputSecurityValue.count == maximumLength else {
@@ -115,7 +120,7 @@ public class BaseSecurityInput: BaseView {
             return
         }
         
-        self.delegate?.valueDidFill(value: inputSecurityValue)
+        self.delegate?.valueDidFill(securityInput: self, value: inputSecurityValue)
     }
     
     private func updateHelper() {
@@ -130,35 +135,33 @@ public class BaseSecurityInput: BaseView {
             return
         }
         
-        inputSecurityValue = ""
         fillSecurityInputView(isError: true)
     
         messageLabel.attributedText = NSAttributedString(string: error, typesetting: Typesetting.caption.at(color: BaseColor.Denotive.red_50))
         messageImageView.isHidden = false
     }
     
-    private func fillSecurityInputView(isError: Bool) {
+    func fillSecurityInputView(isError: Bool) {
         for index in 0..<maximumLength {
-            guard let view = mainStackView.viewWithTag(index + 1000) as? SecurityView else { return }
-            view.securityState = isError ? .error : (index < inputSecurityValue.count ? .filled : .empty)
+            guard let view = mainStackView.viewWithTag(index + 1000) as? SecurityPinView else { return }
+            view.state = isError ? .error : (index < inputSecurityValue.count ? .filled : .empty)
         }
     }
 }
 
-extension BaseSecurityInput: UITextFieldDelegate {
+extension BaseSecurityPintInput: UITextFieldDelegate {
+    // func nay se quyet dinh textfield do co duoc display string minh vua duoc input hay ko. ma minh dang cheating voi cai textfield nay (minh dung cai textfield nay chi de display keyboard len cho cai view)
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // delete
         if string.isEmpty, !inputSecurityValue.isEmpty {
-            
             inputSecurityValue.removeLast()
-            return true
         }
         
         if inputSecurityValue.count < maximumLength {
             inputSecurityValue += string
-            return true
+        } else {
+            inputSecurityValue = string
         }
-        
-        return false
+        return true
     }
 }
