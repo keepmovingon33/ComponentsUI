@@ -88,6 +88,29 @@
                                             <segue destination="DKY-Wg-WQl" kind="show" id="ngs-Hi-rkb"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="sj5-53-NgH">
+                                        <rect key="frame" x="0.0" y="296.5" width="414" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sj5-53-NgH" id="RkN-IO-Z4T">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecurityInput" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNO-To-GvT">
+                                                    <rect key="frame" x="156.5" y="31.5" width="101.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UNO-To-GvT" firstAttribute="centerX" secondItem="RkN-IO-Z4T" secondAttribute="centerX" id="5Xa-hR-pqP"/>
+                                                <constraint firstItem="UNO-To-GvT" firstAttribute="centerY" secondItem="RkN-IO-Z4T" secondAttribute="centerY" id="S9m-RD-eTC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Yu0-uN-ufZ" kind="show" id="Bcj-NW-bJW"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -248,6 +271,51 @@
             </objects>
             <point key="canvasLocation" x="878" y="-346"/>
         </scene>
+        <!--Security Input View Controller-->
+        <scene sceneID="CeS-o3-Byt">
+            <objects>
+                <viewController id="Yu0-uN-ufZ" customClass="SecurityInputViewController" customModule="DemoComponent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3S1-bO-fD8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-LW-HuJ">
+                                <rect key="frame" x="0.0" y="30" width="414" height="416"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityPintInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-aa-fX8" customClass="BaseSecurityOTPInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="144" width="414" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMJ-3H-dFC" customClass="BaseSecurityPinSetupInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3SV-hx-3av"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5GQ-LW-HuJ" firstAttribute="top" secondItem="3SV-hx-3av" secondAttribute="top" constant="20" id="1Qn-cP-2ob"/>
+                            <constraint firstItem="5GQ-LW-HuJ" firstAttribute="leading" secondItem="3SV-hx-3av" secondAttribute="leading" id="JiY-0j-Soh"/>
+                            <constraint firstItem="5GQ-LW-HuJ" firstAttribute="trailing" secondItem="3SV-hx-3av" secondAttribute="trailing" id="KLB-is-RPV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JZM-U5-71O"/>
+                    <connections>
+                        <outlet property="securityOTPInputView" destination="Wh2-aa-fX8" id="mWX-Uy-dtN"/>
+                        <outlet property="securityPinInputView" destination="E8m-Yk-Yg7" id="1dq-hh-eLw"/>
+                        <outlet property="securityPinSetupInput" destination="PMJ-3H-dFC" id="KS8-PB-vpU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaA-Vn-7nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="539"/>
+        </scene>
         <!--Input Field View Controller-->
         <scene sceneID="WOr-Yn-s5Z">
             <objects>
@@ -335,7 +403,7 @@
             <size key="intrinsicContentSize" width="49" height="30"/>
         </designable>
         <designable name="zSf-ub-vLf">
-            <size key="intrinsicContentSize" width="91" height="17"/>
+            <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
     </designables>
     <resources>

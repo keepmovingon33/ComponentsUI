@@ -77,7 +77,6 @@ public class BaseInputField: BaseView {
     
     lazy var messageLabel: UILabel = {
         let label = UILabel()
-        label.font = BaseFont.caption
         label.numberOfLines = 0
         label.isHidden = true
         return label
@@ -263,19 +262,22 @@ public class BaseInputField: BaseView {
         messageImage.isHidden = false
     }
     
+    // add target for textfield, khi minh dang typing va con chuot van con dang trong textfield do
     @objc func textFieldDidChange(_ textField: UITextField) {
         rightButton.isHidden = textField.text?.isEmpty == true
         inputState = .focus
     }
 }
 
+// textfield delegate
 extension BaseInputField: UITextFieldDelegate {
-    // start editing
+    // start editing. Khi vua show keyboard la func nay chay
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         guard inputState != .error else { return }
         inputState = .focus
     }
     
+    // khi ket thuc editing va click chuot ra khoi textfield, keyboard an di
     public func textFieldDidEndEditing(_ textField: UITextField) {
         guard inputState != .error else { return }
         if let text = textField.text, !text.isEmpty {

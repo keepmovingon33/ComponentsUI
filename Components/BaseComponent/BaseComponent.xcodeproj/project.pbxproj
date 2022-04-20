@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3302B3B027F3D3AC000E006F /* Spacing.swift */; };
+		3330D1BA280868A900DAAE10 /* BaseSecurityPintInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1B9280868A900DAAE10 /* BaseSecurityPintInput.swift */; };
+		3330D1BC2808694B00DAAE10 /* SecurityPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */; };
+		3330D1C2280C5AA600DAAE10 /* SecurityOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */; };
+		3330D1C4280E337000DAAE10 /* BaseSecurityOTPInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */; };
+		3330D1C6280F002F00DAAE10 /* SecurityPinSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C5280F002F00DAAE10 /* SecurityPinSetupView.swift */; };
+		3330D1C8280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1C7280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift */; };
 		3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */; };
 		3340A84227F7C20800D800B6 /* BaseInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84127F7C20800D800B6 /* BaseInputField.swift */; };
 		3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84327F7C54F00D800B6 /* BaseDropDown.swift */; };
@@ -74,6 +80,12 @@
 
 /* Begin PBXFileReference section */
 		3302B3B027F3D3AC000E006F /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		3330D1B9280868A900DAAE10 /* BaseSecurityPintInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityPintInput.swift; sourceTree = "<group>"; };
+		3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPinView.swift; sourceTree = "<group>"; };
+		3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityOTPView.swift; sourceTree = "<group>"; };
+		3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityOTPInput.swift; sourceTree = "<group>"; };
+		3330D1C5280F002F00DAAE10 /* SecurityPinSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPinSetupView.swift; sourceTree = "<group>"; };
+		3330D1C7280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecurityPinSetupInput.swift; sourceTree = "<group>"; };
 		3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseInputField+Style.swift"; sourceTree = "<group>"; };
 		3340A84127F7C20800D800B6 /* BaseInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputField.swift; sourceTree = "<group>"; };
 		3340A84327F7C54F00D800B6 /* BaseDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropDown.swift; sourceTree = "<group>"; };
@@ -161,6 +173,19 @@
 				3378F0C828006D15000C1A58 /* BaseView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		3330D1B72808680E00DAAE10 /* SecurityInput */ = {
+			isa = PBXGroup;
+			children = (
+				3330D1C3280E337000DAAE10 /* BaseSecurityOTPInput.swift */,
+				3330D1C7280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift */,
+				3330D1B9280868A900DAAE10 /* BaseSecurityPintInput.swift */,
+				3330D1C1280C5AA600DAAE10 /* SecurityOTPView.swift */,
+				3330D1C5280F002F00DAAE10 /* SecurityPinSetupView.swift */,
+				3330D1BB2808694B00DAAE10 /* SecurityPinView.swift */,
+			);
+			path = SecurityInput;
 			sourceTree = "<group>";
 		};
 		3378F0BC27FBB6D8000C1A58 /* CountryCode */ = {
@@ -337,16 +362,17 @@
 		33AE4CC227CD020B00B6F8CD /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
-				3378F0BC27FBB6D8000C1A58 /* CountryCode */,
 				33AE4CC327CD020B00B6F8CD /* BaseComponent.h */,
 				337AA3BD27CD057D00045F2C /* Buttons */,
 				337AA3C827CD057D00045F2C /* Colors */,
 				3302B3AF27F3D39B000E006F /* Common */,
+				3378F0BC27FBB6D8000C1A58 /* CountryCode */,
 				337AA3CB27CD057D00045F2C /* Extension */,
 				337F537A27CE4E6A009D9894 /* Fonts */,
 				3302B3AB27F3D002000E006F /* InputField */,
 				337AA3C227CD057D00045F2C /* ProgressView */,
 				337AA3DF27CD12B200045F2C /* Resources */,
+				3330D1B72808680E00DAAE10 /* SecurityInput */,
 				337C472027D6478F008FAF6A /* Segments */,
 				337F537127CE4E6A009D9894 /* Stylist */,
 				337F536727CE4E6A009D9894 /* Typography */,
@@ -462,6 +488,7 @@
 			files = (
 				3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */,
 				337F53A127CE4E6A009D9894 /* NSAttributedString+Typography.swift in Sources */,
+				3330D1C6280F002F00DAAE10 /* SecurityPinSetupView.swift in Sources */,
 				337F53AD27CE4E6A009D9894 /* BaseFont+Named.swift in Sources */,
 				3302B3B127F3D3AC000E006F /* Spacing.swift in Sources */,
 				337F53AC27CE4E6A009D9894 /* Style+UILabel.swift in Sources */,
@@ -474,6 +501,7 @@
 				3378F0C728006C5E000C1A58 /* AmountHelperView.swift in Sources */,
 				337AA3D327CD057D00045F2C /* RotationAnimation.swift in Sources */,
 				337F53AA27CE4E6A009D9894 /* Style.swift in Sources */,
+				3330D1C2280C5AA600DAAE10 /* SecurityOTPView.swift in Sources */,
 				337AA3D927CD057D00045F2C /* UIColor+Extension.swift in Sources */,
 				3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */,
 				3378F0C227FDC9A1000C1A58 /* BaseInputAmount.swift in Sources */,
@@ -482,6 +510,7 @@
 				337AA3D027CD057D00045F2C /* LoadingButton.swift in Sources */,
 				337F53A327CE4E6A009D9894 /* String+Typography.swift in Sources */,
 				337F53A227CE4E6A009D9894 /* Transformer.swift in Sources */,
+				3330D1C4280E337000DAAE10 /* BaseSecurityOTPInput.swift in Sources */,
 				337AA3DA27CD057D00045F2C /* UIView+Extension.swift in Sources */,
 				337F53C927CE4E6A009D9894 /* BaseFont+Size.swift in Sources */,
 				337F53A427CE4E6A009D9894 /* AttributeTransformer.swift in Sources */,
@@ -491,15 +520,18 @@
 				337C472327D647AE008FAF6A /* SegmentControl.swift in Sources */,
 				337F53CA27CE4E6A009D9894 /* UIFont+Weight.swift in Sources */,
 				337AA3D427CD057D00045F2C /* ProgressView.swift in Sources */,
+				3330D1BA280868A900DAAE10 /* BaseSecurityPintInput.swift in Sources */,
 				3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */,
 				3378F0C027FD06CA000C1A58 /* String+Extension.swift in Sources */,
 				337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */,
+				3330D1BC2808694B00DAAE10 /* SecurityPinView.swift in Sources */,
 				337AA3D127CD057D00045F2C /* ButtonComponent.swift in Sources */,
 				337F539F27CE4E6A009D9894 /* Typesetting.swift in Sources */,
 				3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */,
 				337AA3D827CD057D00045F2C /* BaseColor.swift in Sources */,
 				337AA3E327CD132D00045F2C /* UIImage+Extension.swift in Sources */,
 				3378F0C527FDCB0C000C1A58 /* CurrencyTextField.swift in Sources */,
+				3330D1C8280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift in Sources */,
 				337F539E27CE4E6A009D9894 /* Typesetting+Named.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
