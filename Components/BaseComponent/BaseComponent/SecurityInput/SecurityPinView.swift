@@ -20,6 +20,7 @@ public class SecurityPinView: BaseView {
         view.translatesAutoresizingMaskIntoConstraints = false
         // khi moi vo, no se set mau cho cai mainView lan dau tien. Va line nay chi run duy nhat 1 lan
         view.backgroundColor = state.mainColor
+        view.cornerRadius = Spacing.small
         return view
     }()
     
@@ -35,8 +36,6 @@ public class SecurityPinView: BaseView {
             mainView.heightAnchor.constraint(equalToConstant: Spacing.medium),
             mainView.widthAnchor.constraint(equalToConstant: Spacing.medium),
         ])
-        
-        mainView.cornerRadius = Spacing.small
     }
     
 }
