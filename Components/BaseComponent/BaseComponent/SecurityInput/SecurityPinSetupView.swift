@@ -18,15 +18,13 @@ public class SecurityPinSetupView: SecurityOTPView {
     
     override func stateChanged() {
         underlineView.backgroundColor = state.getUnderlineViewColorForPinSetup()
-        roundedView.backgroundColor = state.getRoundedViewColor()
-    }
-    
-    override func updateInputValue() {
-        roundedView.isHidden = true
         inputLabel.attributedText = NSAttributedString(string: inputValue, typesetting: Typesetting.mediumTitle.centered.at(color: state.getInputColor()))
-        UIView.animate(withDuration: 0.2, delay: 1) { [weak self] in
-            self?.inputLabel.attributedText = nil
-            self?.roundedView.isHidden = false
+        inputLabel.alpha = 1
+        UIView.animate(withDuration: 0.2, delay: 0.5) { [weak self] in
+            self?.inputLabel.alpha = 0
+//            self?.inputLabel.attributedText = nil
+            self?.roundedView.backgroundColor = self?.state.getRoundedViewColor()
+//            self?.inputLabel.textColor = .clear
         }
     }
     
