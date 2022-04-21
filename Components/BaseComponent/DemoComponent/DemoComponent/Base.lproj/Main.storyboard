@@ -111,6 +111,29 @@
                                             <segue destination="Yu0-uN-ufZ" kind="show" id="Bcj-NW-bJW"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="6gU-4f-Pdn">
+                                        <rect key="frame" x="0.0" y="380.5" width="414" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6gU-4f-Pdn" id="inU-Jg-v8R">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KeyboardNumpad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-oA-Iwz">
+                                                    <rect key="frame" x="138.5" y="31.5" width="137.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zyd-oA-Iwz" firstAttribute="centerY" secondItem="inU-Jg-v8R" secondAttribute="centerY" id="dDh-nx-dV6"/>
+                                                <constraint firstItem="Zyd-oA-Iwz" firstAttribute="centerX" secondItem="inU-Jg-v8R" secondAttribute="centerX" id="yjk-nJ-BAL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7hO-sq-Yed" kind="show" id="GKD-QE-o3x"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -271,6 +294,36 @@
             </objects>
             <point key="canvasLocation" x="878" y="-346"/>
         </scene>
+        <!--Keyboard Numpad View Controller-->
+        <scene sceneID="enG-8Y-9Hc">
+            <objects>
+                <viewController id="7hO-sq-Yed" customClass="KeyboardNumpadViewController" customModule="DemoComponent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2HX-zL-bCC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-4Q-CMt" customClass="BaseNumpadKeyboardView" customModule="BaseComponent">
+                                <rect key="frame" x="16" y="119" width="382" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1fe-vX-Nco"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1fe-vX-Nco" firstAttribute="trailing" secondItem="gK4-4Q-CMt" secondAttribute="trailing" constant="16" id="2zP-xD-kOu"/>
+                            <constraint firstItem="gK4-4Q-CMt" firstAttribute="leading" secondItem="1fe-vX-Nco" secondAttribute="leading" constant="16" id="3rk-7W-tHl"/>
+                            <constraint firstItem="gK4-4Q-CMt" firstAttribute="top" secondItem="1fe-vX-Nco" secondAttribute="top" constant="30" id="Cn5-M8-BSv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="adD-a2-xrr"/>
+                    <connections>
+                        <outlet property="keyboardNumpad" destination="gK4-4Q-CMt" id="hpd-Vk-V4v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhw-98-jMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="703"/>
+        </scene>
         <!--Security Input View Controller-->
         <scene sceneID="CeS-o3-Byt">
             <objects>
@@ -403,7 +456,7 @@
             <size key="intrinsicContentSize" width="49" height="30"/>
         </designable>
         <designable name="zSf-ub-vLf">
-            <size key="intrinsicContentSize" width="46" height="30"/>
+            <size key="intrinsicContentSize" width="91" height="17"/>
         </designable>
     </designables>
     <resources>

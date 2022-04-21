@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		331FA1FB27F5D86E0020F874 /* InputFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331FA1FA27F5D86E0020F874 /* InputFieldViewController.swift */; };
 		3330D1BE2808724700DAAE10 /* SecurityInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330D1BD2808724700DAAE10 /* SecurityInputViewController.swift */; };
+		3374716228108C2E0074C98A /* KeyboardNumpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374716128108C2E0074C98A /* KeyboardNumpadViewController.swift */; };
 		337AA39827CD044100045F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA39727CD044100045F2C /* AppDelegate.swift */; };
 		337AA39A27CD044100045F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA39927CD044100045F2C /* SceneDelegate.swift */; };
 		337AA39C27CD044100045F2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA39B27CD044100045F2C /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		331FA1FA27F5D86E0020F874 /* InputFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldViewController.swift; sourceTree = "<group>"; };
 		3330D1BD2808724700DAAE10 /* SecurityInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityInputViewController.swift; sourceTree = "<group>"; };
+		3374716128108C2E0074C98A /* KeyboardNumpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNumpadViewController.swift; sourceTree = "<group>"; };
 		337AA39427CD044100045F2C /* DemoComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		337AA39727CD044100045F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		337AA39927CD044100045F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				337AA3DD27CD078300045F2C /* ButtonViewController.swift */,
 				337AA3A527CD044200045F2C /* Info.plist */,
 				331FA1FA27F5D86E0020F874 /* InputFieldViewController.swift */,
+				3374716128108C2E0074C98A /* KeyboardNumpadViewController.swift */,
 				337AA3A227CD044200045F2C /* LaunchScreen.storyboard */,
 				337AA39D27CD044100045F2C /* Main.storyboard */,
 				337AA39927CD044100045F2C /* SceneDelegate.swift */,
@@ -180,6 +183,7 @@
 			files = (
 				337AA3DE27CD078300045F2C /* ButtonViewController.swift in Sources */,
 				337AA39C27CD044100045F2C /* ViewController.swift in Sources */,
+				3374716228108C2E0074C98A /* KeyboardNumpadViewController.swift in Sources */,
 				3330D1BE2808724700DAAE10 /* SecurityInputViewController.swift in Sources */,
 				337C471F27D6469D008FAF6A /* SegmentViewController.swift in Sources */,
 				337AA39827CD044100045F2C /* AppDelegate.swift in Sources */,
