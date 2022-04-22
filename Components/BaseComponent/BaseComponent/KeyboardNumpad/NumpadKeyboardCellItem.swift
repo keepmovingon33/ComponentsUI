@@ -9,6 +9,10 @@ import UIKit
 
 public class NumpadKeyboardCellItem: UICollectionViewCell {
     
+    static let identifier = "NumpadKeyboardCellItem"
+    
+    private var item: NumpadItem?
+    
     lazy var keypadView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +70,9 @@ public class NumpadKeyboardCellItem: UICollectionViewCell {
     }
     
     public func bindingData(item: NumpadItem) {
+        self.item = item
         keypadView.backgroundColor = item.type.getNumPadBackgroundColor()
+    
         if let inputValue = item.value {
             inputLabel.attributedText = NSAttributedString(string: inputValue, typesetting: Typesetting.mediumTitle)
         } else {
@@ -74,6 +80,20 @@ public class NumpadKeyboardCellItem: UICollectionViewCell {
         }
         
         numpadImageView.image = item.image
+        numpadImageView.tintColor = item.type.getHighLightColor().normal
+    }
+    
+    // animation thi ko can dung weak self
+    public override var isHighlighted: Bool {
+        didSet {
+            guard let highLightColor = item?.type.getHighLightColor(), let numpadType = item?.type else { return }
+            UIView.animate(withDuration: 0.1) {
+                if numpadType == .numpad {
+                    self.keypadView.backgroundColor = self.isHighlighted ? highLightColor.highLight : highLightColor.normal
+                }
+                self.numpadImageView.tintColor = self.isHighlighted ? highLightColor.highLight : highLightColor.normal
+            }
+        }
     }
     
 }
@@ -82,6 +102,28 @@ public struct NumpadItem {
     let value: String?
     let image: UIImage?
     let type: NumpadType
+    
+    static func defaultValue() -> [NumpadItem] {
+        return [
+            NumpadItem(value: "1", image: nil, type: .numpad),
+            NumpadItem(value: "2", image: nil, type: .numpad),
+            NumpadItem(value: "3", image: nil, type: .numpad),
+            NumpadItem(value: "4", image: nil, type: .numpad),
+            NumpadItem(value: "5", image: nil, type: .numpad),
+            NumpadItem(value: "6", image: nil, type: .numpad),
+            NumpadItem(value: "7", image: nil, type: .numpad),
+            NumpadItem(value: "8", image: nil, type: .numpad),
+            NumpadItem(value: "9", image: nil, type: .numpad),
+            NumpadItem(value: nil, image: ImageProvider.image(named: "ic_bio_touchID"), type: .biometric),
+            NumpadItem(value: "0", image: nil, type: .numpad),
+            NumpadItem(value: nil, image: ImageProvider.image(named: "ic_backspace"), type: .delete)
+        ]
+    }
+}
+
+public struct HighLightColor {
+    let highLight: UIColor
+    let normal: UIColor
 }
 
 public enum NumpadType {
@@ -95,6 +137,16 @@ public enum NumpadType {
             return BaseColor.Grey.grey_5
         default:
             return .clear
+        }
+    }
+    
+    func getHighLightColor() -> HighLightColor {
+        switch self {
+        case .numpad:
+            return HighLightColor(highLight: BaseColor.Indigo.indigo_10, normal: BaseColor.Grey.grey_5)
+        case .delete, .biometric:
+            return HighLightColor(highLight: BaseColor.Grey.grey_100.withAlphaComponent(0.3),
+                                  normal: BaseColor.Grey.grey_100)
         }
     }
 }

@@ -302,17 +302,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-4Q-CMt" customClass="BaseNumpadKeyboardView" customModule="BaseComponent">
-                                <rect key="frame" x="16" y="119" width="382" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-4Q-CMt" customClass="BaseNumpadKeyboardView" customModule="BaseComponent">
+                                <rect key="frame" x="0.0" y="30" width="414" height="748"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1fe-vX-Nco"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1fe-vX-Nco" firstAttribute="trailing" secondItem="gK4-4Q-CMt" secondAttribute="trailing" constant="16" id="2zP-xD-kOu"/>
-                            <constraint firstItem="gK4-4Q-CMt" firstAttribute="leading" secondItem="1fe-vX-Nco" secondAttribute="leading" constant="16" id="3rk-7W-tHl"/>
-                            <constraint firstItem="gK4-4Q-CMt" firstAttribute="top" secondItem="1fe-vX-Nco" secondAttribute="top" constant="30" id="Cn5-M8-BSv"/>
+                            <constraint firstItem="1fe-vX-Nco" firstAttribute="trailing" secondItem="gK4-4Q-CMt" secondAttribute="trailing" id="2zP-xD-kOu"/>
+                            <constraint firstItem="gK4-4Q-CMt" firstAttribute="leading" secondItem="1fe-vX-Nco" secondAttribute="leading" id="3rk-7W-tHl"/>
+                            <constraint firstItem="gK4-4Q-CMt" firstAttribute="top" secondItem="1fe-vX-Nco" secondAttribute="top" priority="250" constant="30" id="Cn5-M8-BSv"/>
+                            <constraint firstItem="1fe-vX-Nco" firstAttribute="bottom" secondItem="gK4-4Q-CMt" secondAttribute="bottom" constant="30" id="EWr-At-bhw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="adD-a2-xrr"/>
@@ -332,20 +333,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-LW-HuJ">
-                                <rect key="frame" x="0.0" y="30" width="414" height="416"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-LW-HuJ">
+                                <rect key="frame" x="0.0" y="20" width="414" height="182"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityPintInput" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-Yk-Yg7" customClass="BaseSecurityPintInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="50" id="b3M-Eg-7lz"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-aa-fX8" customClass="BaseSecurityOTPInput" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="144" width="414" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-aa-fX8" customClass="BaseSecurityOTPInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="66" width="414" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="50" id="G5e-hX-Rxp"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMJ-3H-dFC" customClass="BaseSecurityPinSetupInput" customModule="BaseComponent">
-                                        <rect key="frame" x="0.0" y="288" width="414" height="128"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMJ-3H-dFC" customClass="BaseSecurityPinSetupInput" customModule="BaseComponent">
+                                        <rect key="frame" x="0.0" y="132" width="414" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="50" id="pLU-BN-GDx"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -377,25 +387,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-gB-WR5">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-gB-WR5">
                                 <rect key="frame" x="16" y="16" width="382" height="248"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-p8-XKd" customClass="BaseDropDown" customModule="BaseComponent">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-p8-XKd" customClass="BaseDropDown" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="50" id="8Gy-3w-oia"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-4p-mDB" customClass="BaseInputField" customModule="BaseComponent">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-4p-mDB" customClass="BaseInputField" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="66" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="50" id="0U9-58-Wl6"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-dl-3T3" customClass="BaseInputPhoneNumber" customModule="BaseComponent">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-dl-3T3" customClass="BaseInputPhoneNumber" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="132" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="50" id="IpG-S3-7fB"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputAmount" customModule="BaseComponent">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-kY-FlU" customClass="BaseInputAmount" customModule="BaseComponent">
                                         <rect key="frame" x="0.0" y="198" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="50" id="Zi9-Fs-k9I"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j12-dg-sD3" customClass="PrimaryButton" customModule="BaseComponent">
-                                <rect key="frame" x="16" y="401" width="382" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j12-dg-sD3" customClass="PrimaryButton" customModule="BaseComponent">
+                                <rect key="frame" x="16" y="314" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="paP-4U-xxW"/>
                                 </constraints>

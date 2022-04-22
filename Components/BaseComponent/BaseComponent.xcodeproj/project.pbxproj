@@ -19,6 +19,7 @@
 		3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84327F7C54F00D800B6 /* BaseDropDown.swift */; };
 		3374715E28105F240074C98A /* NumpadKeyboardCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374715D28105F240074C98A /* NumpadKeyboardCellItem.swift */; };
 		3374716028105F5A0074C98A /* BaseNumpadKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374715F28105F5A0074C98A /* BaseNumpadKeyboardView.swift */; };
+		3374718C281227370074C98A /* SelfSizingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374718B281227370074C98A /* SelfSizingCollectionView.swift */; };
 		3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0B927FBB684000C1A58 /* BaseInputPhoneNumber.swift */; };
 		3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0BD27FBB6F7000C1A58 /* CountryCodeView.swift */; };
 		3378F0C027FD06CA000C1A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0BF27FD06CA000C1A58 /* String+Extension.swift */; };
@@ -93,6 +94,7 @@
 		3340A84327F7C54F00D800B6 /* BaseDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropDown.swift; sourceTree = "<group>"; };
 		3374715D28105F240074C98A /* NumpadKeyboardCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadKeyboardCellItem.swift; sourceTree = "<group>"; };
 		3374715F28105F5A0074C98A /* BaseNumpadKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNumpadKeyboardView.swift; sourceTree = "<group>"; };
+		3374718B281227370074C98A /* SelfSizingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingCollectionView.swift; sourceTree = "<group>"; };
 		3378F0B927FBB684000C1A58 /* BaseInputPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputPhoneNumber.swift; sourceTree = "<group>"; };
 		3378F0BD27FBB6F7000C1A58 /* CountryCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeView.swift; sourceTree = "<group>"; };
 		3378F0BF27FD06CA000C1A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				337AA3E227CD132D00045F2C /* UIImage+Extension.swift */,
 				3378F0BF27FD06CA000C1A58 /* String+Extension.swift */,
 				3378F0CA280071DD000C1A58 /* Formatter+Extension.swift */,
+				3374718B281227370074C98A /* SelfSizingCollectionView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				3330D1C2280C5AA600DAAE10 /* SecurityOTPView.swift in Sources */,
 				337AA3D927CD057D00045F2C /* UIColor+Extension.swift in Sources */,
 				3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */,
+				3374718C281227370074C98A /* SelfSizingCollectionView.swift in Sources */,
 				3378F0C227FDC9A1000C1A58 /* BaseInputAmount.swift in Sources */,
 				337AA3D227CD057D00045F2C /* StrokeColorAnimation.swift in Sources */,
 				3378F0CB280071DD000C1A58 /* Formatter+Extension.swift in Sources */,

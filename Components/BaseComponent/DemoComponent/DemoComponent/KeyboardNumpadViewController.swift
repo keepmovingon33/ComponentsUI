@@ -14,10 +14,12 @@ class KeyboardNumpadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        keyboardNumpad.delegate = self
     }
-    
+}
 
-
+extension KeyboardNumpadViewController: BaseNumpadKeyboardViewDelegate {
+    func numpadTapped(value: String) {
+        print(value)
+    }
 }

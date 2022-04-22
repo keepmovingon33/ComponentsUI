@@ -7,48 +7,68 @@
 
 import UIKit
 
+public protocol BaseNumpadKeyboardViewDelegate {
+    func numpadTapped(value: String)
+}
+
 public class BaseNumpadKeyboardView: BaseView {
-    lazy var numpadStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = Spacing.huge
-        return stackView
+    
+    private let numpadItems = NumpadItem.defaultValue()
+    
+    public var delegate: BaseNumpadKeyboardViewDelegate?
+    
+    // cai nay de setup layout collectionview, vi du padding giua cac item, hoac direction scroll
+    lazy var flowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        // layout giua 2 item
+        layout.minimumInteritemSpacing = Spacing.huge
+        // layout giua 2 dong
+        layout.minimumLineSpacing = Spacing.medium
+        return layout
+    }()
+    
+    lazy var numpadCollectionView: SelfSizingCollectionView = {
+        let collectionView = SelfSizingCollectionView(frame: self.frame, collectionViewLayout: flowLayout)
+        collectionView.register(NumpadKeyboardCellItem.self, forCellWithReuseIdentifier: NumpadKeyboardCellItem.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        // set padding 4 goc
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 48, bottom: 0, right: 48)
+        return collectionView
     }()
     
     public override func setupView() {
-        self.addSubview(numpadStackView)
+        self.addSubview(numpadCollectionView)
         
+
+    }
+}
+
+extension BaseNumpadKeyboardView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumpadKeyboardCellItem.identifier, for: indexPath) as? NumpadKeyboardCellItem else {
+            fatalError("Couldn't find NumpadKeyboardCellItem")
+        }
         
-        
-        NSLayoutConstraint.activate([
-            numpadStackView.topAnchor.constraint(equalTo: self.topAnchor),
-            numpadStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            numpadStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            numpadStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            
-            numpadStackView.widthAnchor.constraint(equalToConstant: 200)
-        ])
-        
-        setupStackview()
+        cell.bindingData(item: numpadItems[indexPath.row])
+        return cell
     }
     
-    func setupStackview() {
-//        let view1 = NumpadKeyboardCellItem()
-//        view1.numpadType = .numpad
-//        numpadStackView.addArrangedSubview(view1)
-//        
-//        let view4 = NumpadKeyboardCellItem()
-//        view4.numpadType = .delete
-//        numpadStackView.addArrangedSubview(view4)
-//        
-//        let view2 = NumpadKeyboardCellItem()
-//        view2.numpadType = .numpad
-//        numpadStackView.addArrangedSubview(view2)
-//        
-//        let view3 = NumpadKeyboardCellItem()
-//        view3.numpadType = .delete
-//        numpadStackView.addArrangedSubview(view3)
-//        
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numpadItems.count
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width - 160) / 3
+        return CGSize(width: width, height: width)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let item = numpadItems[indexPath.row]
+        let value = item.value ?? (item.type == .biometric ? "bio" : "delete")
+        
+        delegate?.numpadTapped(value: value)
     }
 }
