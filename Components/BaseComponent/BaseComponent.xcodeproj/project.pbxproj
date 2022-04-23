@@ -20,6 +20,7 @@
 		3374715E28105F240074C98A /* NumpadKeyboardCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374715D28105F240074C98A /* NumpadKeyboardCellItem.swift */; };
 		3374716028105F5A0074C98A /* BaseNumpadKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374715F28105F5A0074C98A /* BaseNumpadKeyboardView.swift */; };
 		3374718C281227370074C98A /* SelfSizingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374718B281227370074C98A /* SelfSizingCollectionView.swift */; };
+		3374718F2813751F0074C98A /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374718E2813751F0074C98A /* HapticFeedback.swift */; };
 		3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0B927FBB684000C1A58 /* BaseInputPhoneNumber.swift */; };
 		3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0BD27FBB6F7000C1A58 /* CountryCodeView.swift */; };
 		3378F0C027FD06CA000C1A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3378F0BF27FD06CA000C1A58 /* String+Extension.swift */; };
@@ -95,6 +96,7 @@
 		3374715D28105F240074C98A /* NumpadKeyboardCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadKeyboardCellItem.swift; sourceTree = "<group>"; };
 		3374715F28105F5A0074C98A /* BaseNumpadKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNumpadKeyboardView.swift; sourceTree = "<group>"; };
 		3374718B281227370074C98A /* SelfSizingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingCollectionView.swift; sourceTree = "<group>"; };
+		3374718E2813751F0074C98A /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		3378F0B927FBB684000C1A58 /* BaseInputPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputPhoneNumber.swift; sourceTree = "<group>"; };
 		3378F0BD27FBB6F7000C1A58 /* CountryCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeView.swift; sourceTree = "<group>"; };
 		3378F0BF27FD06CA000C1A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -201,6 +203,14 @@
 				3374715D28105F240074C98A /* NumpadKeyboardCellItem.swift */,
 			);
 			path = KeyboardNumpad;
+			sourceTree = "<group>";
+		};
+		3374718D2813750D0074C98A /* HapticFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				3374718E2813751F0074C98A /* HapticFeedback.swift */,
+			);
+			path = HapticFeedback;
 			sourceTree = "<group>";
 		};
 		3378F0BC27FBB6D8000C1A58 /* CountryCode */ = {
@@ -378,6 +388,7 @@
 		33AE4CC227CD020B00B6F8CD /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
+				3374718D2813750D0074C98A /* HapticFeedback */,
 				33AE4CC327CD020B00B6F8CD /* BaseComponent.h */,
 				337AA3BD27CD057D00045F2C /* Buttons */,
 				337AA3C827CD057D00045F2C /* Colors */,
@@ -553,6 +564,7 @@
 				3378F0C527FDCB0C000C1A58 /* CurrencyTextField.swift in Sources */,
 				3330D1C8280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift in Sources */,
 				337F539E27CE4E6A009D9894 /* Typesetting+Named.swift in Sources */,
+				3374718F2813751F0074C98A /* HapticFeedback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

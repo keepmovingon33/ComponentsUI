@@ -359,6 +359,13 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcS-74-CtS" customClass="BaseNumpadKeyboardView" customModule="BaseComponent">
+                                <rect key="frame" x="0.0" y="758" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="50" id="11O-2e-u4u"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3SV-hx-3av"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -366,10 +373,14 @@
                             <constraint firstItem="5GQ-LW-HuJ" firstAttribute="top" secondItem="3SV-hx-3av" secondAttribute="top" constant="20" id="1Qn-cP-2ob"/>
                             <constraint firstItem="5GQ-LW-HuJ" firstAttribute="leading" secondItem="3SV-hx-3av" secondAttribute="leading" id="JiY-0j-Soh"/>
                             <constraint firstItem="5GQ-LW-HuJ" firstAttribute="trailing" secondItem="3SV-hx-3av" secondAttribute="trailing" id="KLB-is-RPV"/>
+                            <constraint firstItem="ZcS-74-CtS" firstAttribute="leading" secondItem="3SV-hx-3av" secondAttribute="leading" id="KLM-gr-uma"/>
+                            <constraint firstItem="3SV-hx-3av" firstAttribute="bottom" secondItem="ZcS-74-CtS" secondAttribute="bottom" id="XDv-RW-ZJt"/>
+                            <constraint firstItem="3SV-hx-3av" firstAttribute="trailing" secondItem="ZcS-74-CtS" secondAttribute="trailing" id="a1D-QQ-wqk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JZM-U5-71O"/>
                     <connections>
+                        <outlet property="numpadView" destination="ZcS-74-CtS" id="NUY-T9-tY9"/>
                         <outlet property="securityOTPInputView" destination="Wh2-aa-fX8" id="mWX-Uy-dtN"/>
                         <outlet property="securityPinInputView" destination="E8m-Yk-Yg7" id="1dq-hh-eLw"/>
                         <outlet property="securityPinSetupInput" destination="PMJ-3H-dFC" id="KS8-PB-vpU"/>

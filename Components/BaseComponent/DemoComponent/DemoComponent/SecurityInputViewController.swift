@@ -14,6 +14,10 @@ class SecurityInputViewController: UIViewController {
     @IBOutlet weak var securityOTPInputView: BaseSecurityOTPInput!
     @IBOutlet weak var securityPinSetupInput: BaseSecurityPinSetupInput!
     
+    private let isCustomizedNumpad: Bool = false
+    
+    @IBOutlet weak var numpadView: BaseNumpadKeyboardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,8 +30,19 @@ class SecurityInputViewController: UIViewController {
         securityPinSetupInput.helperText = "Pin Setup helper"
         securityPinSetupInput.delegate = self
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
-        self.view.addGestureRecognizer(tapGesture)
+        displayNumpad(isCustomizedNumpad)
+        
+    }
+    
+    func displayNumpad(_ isCustomizedNumpad: Bool) {
+        if isCustomizedNumpad {
+            numpadView.delegate = self
+            securityPinInputView.hideTextField()
+        } else {
+            numpadView.isHidden = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+            self.view.addGestureRecognizer(tapGesture)
+        }
     }
     
     @objc func didTap(_ sender: UITapGestureRecognizer? = nil) {
@@ -45,5 +60,21 @@ extension SecurityInputViewController: BaseSecurityInputDelegate {
             securityInput.errorMessage = "Pin error"
         }
         print(value)
+    }
+}
+
+extension SecurityInputViewController: BaseNumpadKeyboardViewDelegate {
+    func numpadTapped(value: String) {
+        if value == "bio" {
+            return
+        } else if value == "delete" && !securityPinInputView.inputSecurityValue.isEmpty {
+            securityPinInputView.inputSecurityValue.removeLast()
+        } else if value != "delete" {
+            if securityPinInputView.inputSecurityValue.count < securityPinInputView.maximumLength {
+                securityPinInputView.inputSecurityValue += value
+            } else {
+                securityPinInputView.inputSecurityValue = value
+            }
+        }
     }
 }

@@ -30,6 +30,7 @@ public class BaseNumpadKeyboardView: BaseView {
     
     lazy var numpadCollectionView: SelfSizingCollectionView = {
         let collectionView = SelfSizingCollectionView(frame: self.frame, collectionViewLayout: flowLayout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(NumpadKeyboardCellItem.self, forCellWithReuseIdentifier: NumpadKeyboardCellItem.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -40,8 +41,13 @@ public class BaseNumpadKeyboardView: BaseView {
     
     public override func setupView() {
         self.addSubview(numpadCollectionView)
-        
-
+    
+        NSLayoutConstraint.activate([
+            numpadCollectionView.topAnchor.constraint(greaterThanOrEqualTo: self.topAnchor),
+            numpadCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            numpadCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            numpadCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
 }
 
@@ -68,6 +74,8 @@ extension BaseNumpadKeyboardView: UICollectionViewDelegate, UICollectionViewData
         
         let item = numpadItems[indexPath.row]
         let value = item.value ?? (item.type == .biometric ? "bio" : "delete")
+        
+        HapticFeedback.light.run()
         
         delegate?.numpadTapped(value: value)
     }
