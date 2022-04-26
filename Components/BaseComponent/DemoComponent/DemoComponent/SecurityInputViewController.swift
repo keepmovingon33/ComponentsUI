@@ -14,7 +14,7 @@ class SecurityInputViewController: UIViewController {
     @IBOutlet weak var securityOTPInputView: BaseSecurityOTPInput!
     @IBOutlet weak var securityPinSetupInput: BaseSecurityPinSetupInput!
     
-    private let isCustomizedNumpad: Bool = false
+    private let isCustomizedNumpad: Bool = true
     
     @IBOutlet weak var numpadView: BaseNumpadKeyboardView!
     
@@ -38,10 +38,11 @@ class SecurityInputViewController: UIViewController {
         if isCustomizedNumpad {
             numpadView.delegate = self
             securityPinInputView.hideTextField()
-        } else {
-            numpadView.isHidden = true
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
             self.view.addGestureRecognizer(tapGesture)
+        } else {
+            numpadView.isHidden = true
+            
         }
     }
     

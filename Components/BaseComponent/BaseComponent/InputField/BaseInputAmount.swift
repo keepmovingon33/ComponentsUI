@@ -7,7 +7,14 @@
 
 import UIKit
 
+public protocol BaseInputAmountDelegate {
+    func inputValueChanged(value: String)
+}
+
 public class BaseInputAmount: BaseInputField {
+    
+    public var delegate: BaseInputAmountDelegate?
+    
     lazy var inputAmount: CurrencyTextField = {
         let textField = CurrencyTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -15,6 +22,10 @@ public class BaseInputAmount: BaseInputField {
         textField.textAlignment = .center
         textField.clipsToBounds = true
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        textField.handleCompletion = { [weak self] value in
+            guard let self = self else { return }
+            self.delegate?.inputValueChanged(value: value)
+        }
         return textField
     }()
     

@@ -106,6 +106,7 @@ extension UIView {
     
     func applyBackgroundGradient(colors: [UIColor], startPoint: CGPoint = CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint = CGPoint(x: 1.0, y: 0.0)) {
         let gradientLayer = CAGradientLayer()
+        gradientLayer.locations = [0.0 , 1.0]
         gradientLayer.colors = colors.map { return $0.cgColor }
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint

@@ -20,6 +20,8 @@
 		337AA3B427CD046800045F2C /* BaseComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 337AA3B227CD046800045F2C /* BaseComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		337AA3DE27CD078300045F2C /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AA3DD27CD078300045F2C /* ButtonViewController.swift */; };
 		337C471F27D6469D008FAF6A /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C471E27D6469D008FAF6A /* SegmentViewController.swift */; };
+		33D37DBB2814D32B0042544B /* PracticeNumpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D37DBA2814D32B0042544B /* PracticeNumpadViewController.swift */; };
+		33D37DCB28176D9A0042544B /* SpendingBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D37DCA28176D9A0042544B /* SpendingBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		337AA3B227CD046800045F2C /* BaseComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		337AA3DD27CD078300045F2C /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		337C471E27D6469D008FAF6A /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
+		33D37DBA2814D32B0042544B /* PracticeNumpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNumpadViewController.swift; sourceTree = "<group>"; };
+		33D37DCA28176D9A0042544B /* SpendingBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				3330D1BD2808724700DAAE10 /* SecurityInputViewController.swift */,
 				337C471E27D6469D008FAF6A /* SegmentViewController.swift */,
 				337AA39B27CD044100045F2C /* ViewController.swift */,
+				33D37DBA2814D32B0042544B /* PracticeNumpadViewController.swift */,
+				33D37DCA28176D9A0042544B /* SpendingBarViewController.swift */,
 			);
 			path = DemoComponent;
 			sourceTree = "<group>";
@@ -187,7 +193,9 @@
 				3330D1BE2808724700DAAE10 /* SecurityInputViewController.swift in Sources */,
 				337C471F27D6469D008FAF6A /* SegmentViewController.swift in Sources */,
 				337AA39827CD044100045F2C /* AppDelegate.swift in Sources */,
+				33D37DCB28176D9A0042544B /* SpendingBarViewController.swift in Sources */,
 				337AA39A27CD044100045F2C /* SceneDelegate.swift in Sources */,
+				33D37DBB2814D32B0042544B /* PracticeNumpadViewController.swift in Sources */,
 				331FA1FB27F5D86E0020F874 /* InputFieldViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

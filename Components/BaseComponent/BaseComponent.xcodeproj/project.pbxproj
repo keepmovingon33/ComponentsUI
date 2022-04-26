@@ -17,6 +17,7 @@
 		3340A83F27F5E50800D800B6 /* BaseInputField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */; };
 		3340A84227F7C20800D800B6 /* BaseInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84127F7C20800D800B6 /* BaseInputField.swift */; };
 		3340A84427F7C54F00D800B6 /* BaseDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A84327F7C54F00D800B6 /* BaseDropDown.swift */; };
+		3360F46D28178D5D00134AAE /* BaseSpendingBarView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3360F46C28178D5D00134AAE /* BaseSpendingBarView2.swift */; };
 		3374715E28105F240074C98A /* NumpadKeyboardCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374715D28105F240074C98A /* NumpadKeyboardCellItem.swift */; };
 		3374716028105F5A0074C98A /* BaseNumpadKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374715F28105F5A0074C98A /* BaseNumpadKeyboardView.swift */; };
 		3374718C281227370074C98A /* SelfSizingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374718B281227370074C98A /* SelfSizingCollectionView.swift */; };
@@ -69,7 +70,14 @@
 		337F53C827CE4E6A009D9894 /* BaseFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F539B27CE4E6A009D9894 /* BaseFont.swift */; };
 		337F53C927CE4E6A009D9894 /* BaseFont+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F539C27CE4E6A009D9894 /* BaseFont+Size.swift */; };
 		337F53CA27CE4E6A009D9894 /* UIFont+Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F539D27CE4E6A009D9894 /* UIFont+Weight.swift */; };
+		33900E5F2814B37500C5EF38 /* PracticeNumpadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33900E5E2814B37500C5EF38 /* PracticeNumpadCell.swift */; };
+		33900E612814B38500C5EF38 /* PracticeNumpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33900E602814B38500C5EF38 /* PracticeNumpadView.swift */; };
 		33AE4CC427CD020B00B6F8CD /* BaseComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 33AE4CC327CD020B00B6F8CD /* BaseComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33D37DBD2815C54C0042544B /* PracticeInputPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D37DBC2815C54C0042544B /* PracticeInputPinView.swift */; };
+		33D37DC02815C5990042544B /* PracticeBaseInputPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D37DBF2815C5990042544B /* PracticeBaseInputPinView.swift */; };
+		33D37DC22817336E0042544B /* PracticeOTPInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D37DC12817336E0042544B /* PracticeOTPInputView.swift */; };
+		33D37DC42817337E0042544B /* PracticeBaseOTPInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D37DC32817337E0042544B /* PracticeBaseOTPInputView.swift */; };
+		33D37DC9281764E20042544B /* BaseSpendingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D37DC8281764E20042544B /* BaseSpendingBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +101,7 @@
 		3340A83E27F5E50800D800B6 /* BaseInputField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseInputField+Style.swift"; sourceTree = "<group>"; };
 		3340A84127F7C20800D800B6 /* BaseInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInputField.swift; sourceTree = "<group>"; };
 		3340A84327F7C54F00D800B6 /* BaseDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropDown.swift; sourceTree = "<group>"; };
+		3360F46C28178D5D00134AAE /* BaseSpendingBarView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSpendingBarView2.swift; sourceTree = "<group>"; };
 		3374715D28105F240074C98A /* NumpadKeyboardCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadKeyboardCellItem.swift; sourceTree = "<group>"; };
 		3374715F28105F5A0074C98A /* BaseNumpadKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNumpadKeyboardView.swift; sourceTree = "<group>"; };
 		3374718B281227370074C98A /* SelfSizingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingCollectionView.swift; sourceTree = "<group>"; };
@@ -146,8 +155,15 @@
 		337F539B27CE4E6A009D9894 /* BaseFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFont.swift; sourceTree = "<group>"; };
 		337F539C27CE4E6A009D9894 /* BaseFont+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseFont+Size.swift"; sourceTree = "<group>"; };
 		337F539D27CE4E6A009D9894 /* UIFont+Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Weight.swift"; sourceTree = "<group>"; };
+		33900E5E2814B37500C5EF38 /* PracticeNumpadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNumpadCell.swift; sourceTree = "<group>"; };
+		33900E602814B38500C5EF38 /* PracticeNumpadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeNumpadView.swift; sourceTree = "<group>"; };
 		33AE4CC027CD020B00B6F8CD /* BaseComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AE4CC327CD020B00B6F8CD /* BaseComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseComponent.h; sourceTree = "<group>"; };
+		33D37DBC2815C54C0042544B /* PracticeInputPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeInputPinView.swift; sourceTree = "<group>"; };
+		33D37DBF2815C5990042544B /* PracticeBaseInputPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeBaseInputPinView.swift; sourceTree = "<group>"; };
+		33D37DC12817336E0042544B /* PracticeOTPInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeOTPInputView.swift; sourceTree = "<group>"; };
+		33D37DC32817337E0042544B /* PracticeBaseOTPInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeBaseOTPInputView.swift; sourceTree = "<group>"; };
+		33D37DC8281764E20042544B /* BaseSpendingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSpendingBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +384,40 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		33900E5928146F7A00C5EF38 /* 1-PracticeNumpad */ = {
+			isa = PBXGroup;
+			children = (
+				33900E5E2814B37500C5EF38 /* PracticeNumpadCell.swift */,
+				33900E602814B38500C5EF38 /* PracticeNumpadView.swift */,
+			);
+			path = "1-PracticeNumpad";
+			sourceTree = "<group>";
+		};
+		33900E5B28146F8600C5EF38 /* 2-PracticeSecurityInput */ = {
+			isa = PBXGroup;
+			children = (
+				33D37DBC2815C54C0042544B /* PracticeInputPinView.swift */,
+				33D37DBF2815C5990042544B /* PracticeBaseInputPinView.swift */,
+				33D37DC12817336E0042544B /* PracticeOTPInputView.swift */,
+				33D37DC32817337E0042544B /* PracticeBaseOTPInputView.swift */,
+			);
+			path = "2-PracticeSecurityInput";
+			sourceTree = "<group>";
+		};
+		33900E5C28146FBB00C5EF38 /* 3-PracticeInput */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "3-PracticeInput";
+			sourceTree = "<group>";
+		};
+		33900E5D28146FFA00C5EF38 /* 4-PracticeSegment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "4-PracticeSegment";
+			sourceTree = "<group>";
+		};
 		33AE4CB627CD020B00B6F8CD = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +438,11 @@
 		33AE4CC227CD020B00B6F8CD /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
+				33D37DC5281764880042544B /* SpendingBar */,
+				33900E5D28146FFA00C5EF38 /* 4-PracticeSegment */,
+				33900E5C28146FBB00C5EF38 /* 3-PracticeInput */,
+				33900E5B28146F8600C5EF38 /* 2-PracticeSecurityInput */,
+				33900E5928146F7A00C5EF38 /* 1-PracticeNumpad */,
 				3374718D2813750D0074C98A /* HapticFeedback */,
 				33AE4CC327CD020B00B6F8CD /* BaseComponent.h */,
 				337AA3BD27CD057D00045F2C /* Buttons */,
@@ -406,6 +461,15 @@
 				337F536727CE4E6A009D9894 /* Typography */,
 			);
 			path = BaseComponent;
+			sourceTree = "<group>";
+		};
+		33D37DC5281764880042544B /* SpendingBar */ = {
+			isa = PBXGroup;
+			children = (
+				33D37DC8281764E20042544B /* BaseSpendingBarView.swift */,
+				3360F46C28178D5D00134AAE /* BaseSpendingBarView2.swift */,
+			);
+			path = SpendingBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,6 +594,7 @@
 				337AA3D327CD057D00045F2C /* RotationAnimation.swift in Sources */,
 				337F53AA27CE4E6A009D9894 /* Style.swift in Sources */,
 				3330D1C2280C5AA600DAAE10 /* SecurityOTPView.swift in Sources */,
+				33D37DBD2815C54C0042544B /* PracticeInputPinView.swift in Sources */,
 				337AA3D927CD057D00045F2C /* UIColor+Extension.swift in Sources */,
 				3378F0BE27FBB6F7000C1A58 /* CountryCodeView.swift in Sources */,
 				3374718C281227370074C98A /* SelfSizingCollectionView.swift in Sources */,
@@ -544,6 +609,7 @@
 				337F53C927CE4E6A009D9894 /* BaseFont+Size.swift in Sources */,
 				337F53A427CE4E6A009D9894 /* AttributeTransformer.swift in Sources */,
 				3374715E28105F240074C98A /* NumpadKeyboardCellItem.swift in Sources */,
+				33900E612814B38500C5EF38 /* PracticeNumpadView.swift in Sources */,
 				337F53AE27CE4E6A009D9894 /* BaseFont+Weight.swift in Sources */,
 				337F53A527CE4E6A009D9894 /* Style+UITextView.swift in Sources */,
 				337F53A027CE4E6A009D9894 /* Typesetting+LineHeightFactor.swift in Sources */,
@@ -556,15 +622,21 @@
 				337AA3CE27CD057D00045F2C /* RippleButton.swift in Sources */,
 				3330D1BC2808694B00DAAE10 /* SecurityPinView.swift in Sources */,
 				337AA3D127CD057D00045F2C /* ButtonComponent.swift in Sources */,
+				33D37DC42817337E0042544B /* PracticeBaseOTPInputView.swift in Sources */,
 				3374716028105F5A0074C98A /* BaseNumpadKeyboardView.swift in Sources */,
 				337F539F27CE4E6A009D9894 /* Typesetting.swift in Sources */,
+				33D37DC22817336E0042544B /* PracticeOTPInputView.swift in Sources */,
+				3360F46D28178D5D00134AAE /* BaseSpendingBarView2.swift in Sources */,
+				33D37DC9281764E20042544B /* BaseSpendingBarView.swift in Sources */,
 				3378F0BA27FBB684000C1A58 /* BaseInputPhoneNumber.swift in Sources */,
 				337AA3D827CD057D00045F2C /* BaseColor.swift in Sources */,
 				337AA3E327CD132D00045F2C /* UIImage+Extension.swift in Sources */,
+				33900E5F2814B37500C5EF38 /* PracticeNumpadCell.swift in Sources */,
 				3378F0C527FDCB0C000C1A58 /* CurrencyTextField.swift in Sources */,
 				3330D1C8280F004E00DAAE10 /* BaseSecurityPinSetupInput.swift in Sources */,
 				337F539E27CE4E6A009D9894 /* Typesetting+Named.swift in Sources */,
 				3374718F2813751F0074C98A /* HapticFeedback.swift in Sources */,
+				33D37DC02815C5990042544B /* PracticeBaseInputPinView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

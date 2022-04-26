@@ -9,6 +9,7 @@ import UIKit
 
 public protocol BaseNumpadKeyboardViewDelegate {
     func numpadTapped(value: String)
+//    func numpadTapped(item: NumpadItem)
 }
 
 public class BaseNumpadKeyboardView: BaseView {
@@ -43,7 +44,7 @@ public class BaseNumpadKeyboardView: BaseView {
         self.addSubview(numpadCollectionView)
     
         NSLayoutConstraint.activate([
-            numpadCollectionView.topAnchor.constraint(greaterThanOrEqualTo: self.topAnchor),
+            numpadCollectionView.topAnchor.constraint(equalTo: self.topAnchor),
             numpadCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             numpadCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             numpadCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
