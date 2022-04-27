@@ -147,6 +147,10 @@ public class BaseSecurityPintInput: BaseView {
             view.state = isError ? .error : (index < inputSecurityValue.count ? .filled : .empty)
         }
     }
+    
+    public func hideTextField() {
+        hiddenTextField.isHidden = true
+    }
 }
 
 extension BaseSecurityPintInput: UITextFieldDelegate {

@@ -106,6 +106,7 @@ extension UIView {
     
     func applyBackgroundGradient(colors: [UIColor], startPoint: CGPoint = CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint = CGPoint(x: 1.0, y: 0.0)) {
         let gradientLayer = CAGradientLayer()
+        gradientLayer.locations = [0.0 , 1.0]
         gradientLayer.colors = colors.map { return $0.cgColor }
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint
@@ -135,5 +136,14 @@ extension UIView {
         animation.duration = 0.3
         animation.values = [-10.0, 10.0, -10.0, 5.0, -5.0, 5.0, -2.5, 2.5, 0.0 ]
         layer.add(animation, forKey: "shake")
+    }
+}
+
+extension UIView {
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
     }
 }

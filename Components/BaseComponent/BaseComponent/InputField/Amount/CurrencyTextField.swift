@@ -13,7 +13,9 @@ public class CurrencyTextField: UITextField {
     private var defaultValue = 0.00
     
     /// The numbers that have been entered in the text field
-    private var enteredNumbers = ""
+    public var enteredNumbers = ""
+    
+    var handleCompletion: ((String) -> Void)?
 
     private var didBackspace = false
 
@@ -74,7 +76,9 @@ public class CurrencyTextField: UITextField {
         resultString.addAttribute(NSAttributedString.Key.kern, value: Spacing.tiny, range: symbolRange)
         // padding bottom cua peso so voi input
         resultString.addAttribute(NSAttributedString.Key.baselineOffset, value: Spacing.big, range: symbolRange)
-        resultString.addAttribute(NSAttributedString.Key.baselineOffset, value: Spacing.small, range: NSString(string: fullText).range(of: String(fullText.dropFirst())))
+        let amountValue = String(fullText.dropFirst())
+        resultString.addAttribute(NSAttributedString.Key.baselineOffset, value: Spacing.small, range: NSString(string: fullText).range(of: amountValue))
+        handleCompletion?(amountValue)
         return resultString
     }
     
