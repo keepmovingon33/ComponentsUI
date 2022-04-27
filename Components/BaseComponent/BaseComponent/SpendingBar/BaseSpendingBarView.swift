@@ -19,14 +19,18 @@ public class BaseSpendingBarView: BaseView {
         didSet {
             let balanceValue = Formatter.currencyWithSpace(locale: Locale(identifier: "en-PH")).string(from: NSNumber(value: balanceAmount)) ?? ""
             beforeValueLabel.attributedText = NSAttributedString(string: balanceValue, typesetting: Typesetting.subHeadline)
+            updateSpendingBar()
         }
     }
     
     public var spendingAmount: Double = 0.0 {
         didSet {
-            let afterValue = Formatter.currencyWithSpace(locale: Locale(identifier: "en-PH")).string(from: NSNumber(value: balanceAmount - spendingAmount)) ?? ""
-            afterValueLabel.attributedText = NSAttributedString(string: afterValue, typesetting: Typesetting.subHeadline)
-            spendingBarTrailingConstraint?.constant = -(1 - spendingAmount/balanceAmount) * (self.frame.size.width - 40.0)
+            if spendingAmount > balanceAmount {
+                updateError()
+            } else {
+                updateSpendingBar()
+                spendingBarWidth?.constant = getSpendingWidth()
+            }
             UIView.animate(withDuration: 0.2) {
                 self.layoutIfNeeded()
             }
@@ -95,9 +99,8 @@ public class BaseSpendingBarView: BaseView {
 
         return view
     }()
-    
 
-    var spendingBarTrailingConstraint: NSLayoutConstraint?
+    var spendingBarWidth: NSLayoutConstraint?
     
     // func nay dung sau khi UIView load xong
     public override func layoutSubviews() {
@@ -134,8 +137,8 @@ public class BaseSpendingBarView: BaseView {
             afterStackView.leadingAnchor.constraint(greaterThanOrEqualTo: beforeStackview.trailingAnchor)
         ])
         
-        spendingBarTrailingConstraint = spendingBar.trailingAnchor.constraint(equalTo: totalBalanceBar.trailingAnchor)
-        spendingBarTrailingConstraint?.isActive = true
+        spendingBarWidth = spendingBar.widthAnchor.constraint(equalToConstant: 0)
+        spendingBarWidth?.isActive = true
         updateTotalBalenceBarConstraint()
     }
     
@@ -144,9 +147,20 @@ public class BaseSpendingBarView: BaseView {
         totalBalanceBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Spacing.large).isActive = true
     }
     
-    func updateError() {
+    private func updateError() {
         totalBalanceBar.backgroundColor = BaseColor.Denotive.red_50
-        spendingBar.backgroundColor = .clear
+        spendingBar.isHidden = true
+        afterValueLabel.attributedText = NSAttributedString(string: "--", typesetting: Typesetting.subHeadline)
     }
     
+    private func updateSpendingBar() {
+        spendingBar.isHidden = false
+        totalBalanceBar.backgroundColor = BaseColor.Grey.grey_10
+        let afterValue = Formatter.currencyWithSpace(locale: Locale(identifier: "en-PH")).string(from: NSNumber(value: balanceAmount - spendingAmount)) ?? ""
+        afterValueLabel.attributedText = NSAttributedString(string: afterValue, typesetting: Typesetting.subHeadline)
+    }
+    
+    func getSpendingWidth() -> CGFloat {
+        return (spendingAmount/balanceAmount) * (UIScreen.main.bounds.width - 40)
+    }
 }

@@ -43,3 +43,9 @@ public extension String {
             .joined()
     }
 }
+
+public extension String {
+    func toDouble() -> Double {
+        return Double(self.components(separatedBy: CharacterSet(charactersIn: "0123456789.").inverted).joined()) ?? 0.0
+    }
+}

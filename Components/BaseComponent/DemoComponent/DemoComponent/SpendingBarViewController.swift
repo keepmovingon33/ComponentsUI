@@ -20,17 +20,15 @@ class SpendingBarViewController: UIViewController {
         spendingBarView.balanceAmount = 100000.00
         inputAmount.delegate = self
         
-//        spendingBarView2.balanceAmount = 100000.00
-//        spendingBarView2.spendingAmount = 30000.00
-//        spendingAmount.text = "30,000.00"
-//        spendingBarView2.delegate = self
+        spendingBarView2.balanceAmount = 100000.00
         
     }
 }
 
 extension SpendingBarViewController: BaseInputAmountDelegate {
     func inputValueChanged(value: String) {
-        spendingBarView.spendingAmount = Double(value) ?? 0.0
+        spendingBarView.spendingAmount = value.toDouble()
+        spendingBarView2.spendingAmount = value.toDouble()
     }
 }
 
